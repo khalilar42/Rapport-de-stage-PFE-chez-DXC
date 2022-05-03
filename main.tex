@@ -9,22 +9,24 @@
 \usepackage[T1]{fontenc}
 \usepackage[french]{babel}
 \usepackage{caption}
-\usepackage{titlesec} 
 \usepackage[export]{adjustbox}
 \usepackage[onehalfspacing]{setspace}
+\usepackage{titlesec,xcolor}
 
 \SetLipsumDefault{1}
 
-\titleformat{\chapter}
-  {\centering\Huge\bfseries}  % format of title
-  {}                % label, such as 1.2 for a subsection
-  {0pt}             % length of separation between label and title
-  {}                % before-code hook
-  
+\titleformat % design des titres des chapitres
+{\chapter}
+[display]
+{\centering\normalfont\Large\scshape\bfseries}
+{\rule[3pt]{0.15\linewidth}{3pt}\quad\chaptertitlename~\thechapter\quad \rule[3pt] {0.15\linewidth}{3pt}}
+{0\baselineskip}%espace vertical entre chapitre et nom du chapitre
+{\rule{\linewidth}{0.5pt}\break\Huge}
+[\vspace{-0.5\baselineskip}\rule{\linewidth}{0.5pt}\vspace{0\baselineskip}]
+
+\titlespacing{\chapter}{0}{0pt}{0pt}[0]
 
 \begin{document}
-
-\titlespacing{\chapter}{0pt}{25pt}{12pt}
 
 \captionsetup[figure]{margin=1.5cm,font=small,labelfont={bf},name={Figure},labelsep=colon,textfont={it}}
 \captionsetup[table]{margin=1.5cm,font=small,labelfont={bf},name={Tableau},labelsep=colon,textfont={it}}
@@ -113,7 +115,7 @@ Conception et réalisation d'une application de gestion des effectifs en utilisa
 
 \newpage
 \input{sections/Introduction.tex}
-
+\input{sections/Description_DXC}
 \newpage
 % \input{sections/results.tex}
 % \input{sections/discussion.tex}
