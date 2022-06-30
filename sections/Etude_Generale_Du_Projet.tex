@@ -44,22 +44,18 @@ Le but de ce projet est de réaliser une solution power platform pour la facilit
   \item Facilitez le niveau d'informations souhaité pour générer les bons résultats commerciaux.
 \end{itemize}
 
-Ma mission durant ce stage de fin d’études consiste à améliorer cela, les principaus module que j'ai developpé avec l'équipe BI sont:
+Ma mission durant ce stage de fin d’études consiste à améliorer cela, les principaus module que j'ai developpé avec l'équipe Power Platform sont:
 \\
 \begin{itemize}
-  \item Accounth Growth form
-  \item Accounth Run-Off form
-  \item Accounth Migration
-  \item Accounth Productivity
-  \item Service Line Run-Off
-  \item Service Line Migration Form
-  \item Service Line Productivity Form
-  \item DCT Form
-  \item Rebalance Form
-  \item Sub Contractor Conversion Form
-  \item Sub Contractor Migration Form
-  \item Sub Contractor Replacement Form
-  \item Sub Contractor Productivity Form
+  \item Payroll FTE Existing Account
+  \item Payroll FTE Migration/LPI
+  \item Payroll FTE Productivity
+  \item Payroll FTE New Reduction
+  \item Payroll View Submission
+  \item DCT Create a new Project
+  \item DCT Update a Project
+  \item DCT Close  a  Project
+  \item DCT View Submission Project
 \end{itemize}
 
 \subsection{Livrables}
@@ -77,16 +73,101 @@ Le “Registre de Gestion des Risques” sera créé et maintenu par le chef de 
 décrivant les risques de toutes natures pouvant affecter la bonne réalisation du projet et
 détaillant leur probabilité de réalisation et la sévérité des impacts sur le projet. L’objectif de cette procédure de gestion des risques est d’en maîtriser autant que possible les effets et de permettre la définition et la mise en œuvre de mesures visant à en limiter les effets.
 
-\newpage
 \begin{figure}[!h]
     \centering
     \includegraphics[scale=0.5,keepaspectratio]{Rapport de stage PFE chez DXC/figures/risques.jpg}
     \caption{Registre de Gestion des Risques}
 \end{figure}
 
+\section{Déroulement du projet}
+
+\subsection{Methodologie Scrum}
+\begin{figure}[!h]
+    \centering
+    \includegraphics[scale=0.24,keepaspectratio]{Rapport de stage PFE chez DXC/figures/scrum-methode.jpeg}
+    \caption{Organisation du projet}
+\end{figure}
+
+Le projet n’est décrit que par des phases clés lors de son développement, les besoins du client se concrétisent à la phase de réalisation, chose qu’on ne peut jamais fixer à l’avance par la modélisation initiale, ajoutant à cela que le système doit être extensible dans le temps, car il se peut que d’autres fonctionnalités fassent surface. L’équipe de développement joue
+plusieurs rôles et met plusieurs casquettes pour réaliser les différentes phases clés du projet de façon itérative (Concepteur, Analyste, développeur, testeur), donc une méthode d’agile qui permet une vérification fonctionnelle tout en recueillant les nouveaux besoins s’est avérée indispensable dans ce cas, en plus c’est la méthode demandée par l’entreprise, j’étais dans l’obligation de respecter les consignes de mon employeur et de travailler avec.
+
+\subsection{Méthodologie de développement}
+
+\begin{itemize}
+  \item \textbf{Carnet de produit}: 
+        Le Product Owner rédige les User Stories et les place dans le Product Backlog.
+        Le Product Owner priorise ensuite ces User Stories et ordonne le Product
+        Backlog en conséquence.
+    \\
+    \item \textbf{Réunion de planification de sprint}: 
+        L’équipe Scrum se réunit lors de la réunion de planification de Sprint afin
+        d’établir la liste des User Stories qui seront traitées pendant le Sprint. Celles-ci
+        constituent le Sprint Backlog et sont ensuite découpées en tâches par l’équipe
+        de développement.
+    \\    
+    \item \textbf{Début de Sprint}: 
+        Le Sprint peut alors commencer pour une itération de 2, 3 ou 4 semaines.
+    \\    
+    \item \textbf{Mêlée quotidienne}: 
+        L’équipe se réunit quotidiennement pour réaliser la Mêlée quotidienne
+    \\    
+    \item \textbf{Fin de sprint}: 
+        À l’issue du Sprint, nous possédons un produit potentiellement livrable qui fait l’objet d’une démonstration lors de la revue du Sprint.
+    \\    
+    \item \textbf{Carnet de produit}: 
+        Le cycle se termine enfin par la rétrospective de Sprint. Et ensuite, il n’y a plus qu’à répéter tout cela…
+\end{itemize}
+
+\subsection{Phases du projet}
+
+La partie suivante présente les différentes phases par lesquelles est passé le projet à savoir :
+
+\begin{itemize}
+  \item \textbf{Phase initialisation et cadrage: }
+        Dont les taches sont la prise de connaissance du contexte et métier de
+        l’entreprise cliente et l’environnement du projet.
+    \\
+    \item \textbf{Etude technique et fonctionnelle}: 
+        Qui a pour but d’installer l’environnement du travail, tenir des réunions avec les responsables, rédiger les spécifications fonctionnelles et fixer les choix fonctionnels à travers un document de spécifications des besoins découlant de l’analyse et des besoins du client.
+    \\    
+    \item \textbf{Réalisation de l’application}: 
+        Cette étape constitue l'étape active de la démarche de projet en ce sens où
+        elle concrétise la réalisation du projet, c'est pendant cette étape que se réalisent toutes les prévisions définies précédemment et que s'engagent les ressources dimensionnées durant l'étape de conception.
+    \\    
+    \item \textbf{La mise en production de cette application}: 
+        Déploiement de l’application après la réalisation des tests dans l'environement de production où le client peut utiliser l’application.
+    \\    
+
+\end{itemize}
+
+\subsection{Equipe du projet}
+Le projet sera réalisé par un groupe de deux stagiaires et un 4 employés qui sont les membres de l'equipe Power Platform. 
+\\
+
+La méthode Scrum définit trois rôles qui sont :
+\\
+
+\begin{itemize}
+  \item \textbf{Le Product Owner (le propriétaire du produit):}
+        c’est une personne qui porte la vision du produit à réaliser, généralement c’est un expert dansle domaine.
+    \\
+    \item \textbf{Le Scrum Master (le directeur de produit) :}
+        c'est la personne qui doit assurer le bon déroulement des différents sprints du release, et qui doit impérativement maitriser Scrum.
+    \\    
+    \item \textbf{Le ScrumTeam (l’équipe de Scrum) :}
+        constitué des personnes qui seront
+        chargées d’implémenter les différents besoins du client. Bien
+        évidemment, cette équipe sera constituée des développeurs, des
+        infographistes,etc.
+    \\    
+
+\end{itemize}
+
 \subsection{Planification du projet}
 
-Le projet était nouveau pour ma part, Il utilise power platform une technologie non abordée le long de mon parcours scolaire. Du coup, une planification rigoureuse s’est imposée pour prévoir le déroulement du projet. Grâce aux réunions tenues avec mon encadrant au sein de DXC, J'ai été éclairés sur les différentes étapes du projet ainsi que leurs séquencements.
+Le projet était nouveau pour ma part, Il utilise power platform une technologie non abordée le long de mon parcours scolaire. Du coup, une planification rigoureuse s’est imposée pour prévoir le déroulement du projet. Grâce aux réunions tenues avec mon encadrant au sein de DXC, j'ai été éclairés sur les différentes étapes du projet ainsi que leurs séquencements.
+\\ \\
+D'autre part le projet souffre de l'impossibilité de verrouiller les exigences entre les versions et cela est dû à la complexité des processus que le projet tente de résoudre, ce qui entraîne un cycle de changements d'exigences nécessitant un niveau d'agilité plus élevé, la raison pour laquelle Power Platform a été choisi comme choix de technologie.
 \\\\
 Le stage a débuté le 1er mars pour une durée de 6 mois. Il en résulte le planning
 suivant :
@@ -97,18 +178,28 @@ suivant :
     \caption{Diagramme de Gantt}
 \end{figure}
 
-\newpage
 Le projet est partagé en trois grandes étapes : 
 \\
 \begin{itemize}
-  \item La première est une phase de documentation dont les objectifs est de bien assimiler les différents composant de Microsoft Power Platform à savoir manipuler Power Apps et Power Automate.
+  \item La première est une phase de documentation dont les objectifs est de bien assimiler les différents composant de Microsoft Power Platform.
   \item La phase de l'élaboration du cahier de charge, vu que le projet avait beaucoup de collaborateur cette dernière a pris du temps pour les mettre en accord sur les différentes fonctionnalités de l'application.
   \item La phase de conception de l'application
   \item La phase de réalisation de l'application où j'ai commencé par d'abord élaborer le frontend pour ensuite passer au backend en utilisant Power Apps et Power Automate.
   \item Finalement la validation de l'application par les différents membres de l'équipe ainsi que ça documentation.
 \end{itemize}
 \\
+
+\subsection{Gestion et suivi du projet}
+Pour ce qui est de la gestion et suivi des nouvelle demande ainsi qu'erreur dans le projet, \textbf{Kanban} était l'outil utilisé qui permettait de voir les nouveaux problemes ainsi que nouvelle demande du client comme montrer dans la figure ci-dessous:
+
+\begin{figure}[!h]
+    \centering
+    \includegraphics[scale=0.35,keepaspectratio]{Rapport de stage PFE chez DXC/figures/kanban.png}
+    \caption{Gestion et suivi du projet}
+\end{figure}
+
+
 \section{Conclusion}
 
-Dans ce chapitre j’ai présenté l’étude générale du projet ainsi que son but les differents livrable ainsi que la planification de ce dernier. Le chapitre suivant se concentrera sur l’étude des besoins du
-projet.
+Dans ce chapitre j’ai présenté l’étude générale du projet et le choix de la méthodologie ainsi
+que le déroulement du projet,son but, les differents livrable, la planification du projet, et finalement la gestion et suivi de ce dernier. Le chapitre suivant se concentrera sur l’étude des besoins du projet.
