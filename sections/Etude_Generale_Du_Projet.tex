@@ -21,30 +21,24 @@ d’identification et planification du projet.
 \section{Périmètre du projet}
 \subsection{Problématique générale}
 
-Actuellement, il n’existe aucune solution pour la gestion d'effectif. Il est
-pertinent de libérer le style classique adopté par les commerciaux et les responsables des
-ressources humaines qui consiste à utiliser des documents « Excel » pour classifier tous les
-acteurs matériaux ou humanitaires qui participent dans la construction d’un « Deal », et
-faire des calculs manuels des coûts.
+Actuellement, il n’existe aucune solution pour le suivi d’une pipe commerciale. La méthodologie utilisée pour l’instant est basée sur plusieurs fichiers Excel qui sont partagés entre plusieurs entités. Il est pertinent de libérer ce style classique adopté par les commerciaux et les responsables des ressources humaines qui est basé sur le calcul manuelle des couts ainsi que l'utilisation excessive d'Excel pour classifier tous les acteurs matériaux ou humanitaires qui participent dans la construction d’un « Deal ». 
 \\
 
-Donc notre problématique majeure, nous devons définir d’une manière claire et précise les
-besoins et les attentes d’un système d’information permettant d’automatiser les
-remontées de l’équipe vers différentes entités, ainsi que la saisie des Deals, choix des
-Squads, l’affectation des ressources et aussi la gestion de la relation client. D’une autre part garder la trace de tous les échanges afin de pouvoir établir des statistiques et prendre la décision du gain du deal.
+Donc notre problématique majeure est de définir d’une manière claire et précise les besoins et les attentes d’un système d’information permettant d’automatiser les remontées de l’équipe vers différentes entités, ainsi que la saisie des Deals, choix des Squads, l’affectation des ressources et aussi la gestion de la relation client. D’une autre part garder la trace de tous les échanges afin de pouvoir établir des statistiques ainsi que des tableau de bord pour prendre la décision du gain du deal.
 
 \subsection{But du projet}
 
-Le but de ce projet est de réaliser une solution power platform pour la facilitation et la gestion de la planification des effectifs. C’est un outil pour la digitalisation du processus de gestion des effectifs qui a pour vision de :
+Le but de ce projet est de réaliser une solution Power Platform pour la facilitation et la gestion du système d’information. Un outil qui va permettre de digitaliser le processus de gestion de Pipe commercial et de se libérer de l’utilisation exagéré des fichiers Excel pour passer vers l’utilisation de base de données plus robuste et efficace. L’application a pour vision de :  
+\\
 
 \begin{itemize}
-  \item Un contrôle des coûts efficace nécessite une plate-forme robuste capable de rassembler des données à partir de différentes sources.
-  \item Permettre aux account et service line de s'imbriquer conjointement sur les actions nécessaires à l'aide d'informations commerciales en temps quasi réel non disponibles dans les tableaux de bord de l'entreprise.
+  \item Un contrôle efficace des coûts ce qui explique l'utilisation d'une plate-forme robuste capable de rassembler des données à partir de différentes sources.
+  \item Permettre aux clients et service line de s'imbriquer conjointement sur les actions nécessaires à l'aide d'informations commerciales en temps quasi réel non disponibles dans les tableaux de bord de l'entreprise.
   \item Capacité à extraire les informations nécessaires pour répondre aux demandes des clients de manière agile et automatisée.
-  \item Facilitez le niveau d'informations souhaité pour générer les bons résultats commerciaux.
+  \item Facilitez l'accès au niveau d'informations souhaité pour générer les bons résultats commerciaux.
 \end{itemize}
 
-Ma mission durant ce stage de fin d’études consiste à améliorer cela, les principaus module que j'ai developpé avec l'équipe Power Platform sont:
+Ma mission durant ce stage de fin d’études consiste à améliorer cela, les principaux module que j'ai developpé avec l'équipe Power Platform sont:
 \\
 \begin{itemize}
   \item Payroll FTE Existing Account
@@ -57,15 +51,6 @@ Ma mission durant ce stage de fin d’études consiste à améliorer cela, les p
   \item DCT Close  a  Project
   \item DCT View Submission Project
 \end{itemize}
-
-\subsection{Livrables}
-Le tableau suivant reprend les livrables du projet :
-
-\begin{figure}[!h]
-    \centering
-    \includegraphics[scale=0.55,keepaspectratio]{Rapport de stage PFE chez DXC/figures/livrable.JPG}
-    \caption{Les Livrables}
-\end{figure}
 
 \subsection{Registre de Gestion des Risques} 
 
@@ -82,14 +67,14 @@ détaillant leur probabilité de réalisation et la sévérité des impacts sur 
 \section{Déroulement du projet}
 
 \subsection{Methodologie Scrum}
+
+Nous avons opté pour cette méthode car la mise en œuvre de notre projet nécessite une vision globale de la solution à mettre en place, que ce soit au niveau technique, architectural ou fonctionnel. De plus le projet n’est décrit que par des phases clés lors de son développement, les besoins de client se concrétisent à la phase de réalisation, chose qu’on ne peut jamais fixer à l’avance par la modélisation initiale, ajoutant a cela l’extensibilité du système dans le temps, la demande de nouvelle fonctionnalités ..etc. la méthode agile qui permet une vérification fonctionnelle tout en recueillant les nouveau besoins s’est montré indispensable dans ce cas, en plus c’est la méthode demandée par l’entreprise, j’étais dans l’obligation de respecter les consignes de mon employeur et de travailler avec.
+
 \begin{figure}[!h]
     \centering
-    \includegraphics[scale=0.24,keepaspectratio]{Rapport de stage PFE chez DXC/figures/scrum-methode.jpeg}
-    \caption{Organisation du projet}
+    \includegraphics[scale=0.25,keepaspectratio]{Rapport de stage PFE chez DXC/figures/scrum-methode.jpeg}
+    \caption{Methodologie Scrum}
 \end{figure}
-
-Le projet n’est décrit que par des phases clés lors de son développement, les besoins du client se concrétisent à la phase de réalisation, chose qu’on ne peut jamais fixer à l’avance par la modélisation initiale, ajoutant à cela que le système doit être extensible dans le temps, car il se peut que d’autres fonctionnalités fassent surface. L’équipe de développement joue
-plusieurs rôles et met plusieurs casquettes pour réaliser les différentes phases clés du projet de façon itérative (Concepteur, Analyste, développeur, testeur), donc une méthode d’agile qui permet une vérification fonctionnelle tout en recueillant les nouveaux besoins s’est avérée indispensable dans ce cas, en plus c’est la méthode demandée par l’entreprise, j’étais dans l’obligation de respecter les consignes de mon employeur et de travailler avec.
 
 \subsection{Méthodologie de développement}
 
@@ -121,6 +106,7 @@ plusieurs rôles et met plusieurs casquettes pour réaliser les différentes pha
 \subsection{Phases du projet}
 
 La partie suivante présente les différentes phases par lesquelles est passé le projet à savoir :
+\\
 
 \begin{itemize}
   \item \textbf{Phase initialisation et cadrage: }
@@ -141,20 +127,26 @@ La partie suivante présente les différentes phases par lesquelles est passé l
 \end{itemize}
 
 \subsection{Equipe du projet}
-Le projet sera réalisé par un groupe de deux stagiaires et un 4 employés qui sont les membres de l'equipe Power Platform. 
+Le projet sera réalisé par un groupe de deux stagiaires et trois employés qui sont les membres de l'equipe Power Platform comme montré dans la figure suivante:
 \\
+
+\begin{figure}[!h]
+    \centering
+    \includegraphics[scale=0.5,keepaspectratio]{Rapport de stage PFE chez DXC/figures/Equipe du projet.png}
+    \caption{Equipe du projet}
+\end{figure}
 
 La méthode Scrum définit trois rôles qui sont :
 \\
 
 \begin{itemize}
   \item \textbf{Le Product Owner (le propriétaire du produit):}
-        c’est une personne qui porte la vision du produit à réaliser, généralement c’est un expert dansle domaine.
+        c’est une personne qui porte la vision du produit à réaliser, généralement c’est un expert dans le domaine.
     \\
     \item \textbf{Le Scrum Master (le directeur de produit) :}
         c'est la personne qui doit assurer le bon déroulement des différents sprints du release, et qui doit impérativement maitriser Scrum.
     \\    
-    \item \textbf{Le ScrumTeam (l’équipe de Scrum) :}
+    \item \textbf{La ScrumTeam (l’équipe de Scrum) :}
         constitué des personnes qui seront
         chargées d’implémenter les différents besoins du client. Bien
         évidemment, cette équipe sera constituée des développeurs, des
@@ -163,34 +155,45 @@ La méthode Scrum définit trois rôles qui sont :
 
 \end{itemize}
 
+
+
 \subsection{Planification du projet}
 
-Le projet était nouveau pour ma part, Il utilise power platform une technologie non abordée le long de mon parcours scolaire. Du coup, une planification rigoureuse s’est imposée pour prévoir le déroulement du projet. Grâce aux réunions tenues avec mon encadrant au sein de DXC, j'ai été éclairés sur les différentes étapes du projet ainsi que leurs séquencements.
-\\ \\
+Le projet était nouveau pour ma part, Il utilise power platform une technologie non abordée le long de mon parcours scolaire. Du coup, une planification rigoureuse s’est imposée pour prévoir le déroulement du projet.
+\\ 
 D'autre part le projet souffre de l'impossibilité de verrouiller les exigences entre les versions et cela est dû à la complexité des processus que le projet tente de résoudre, ce qui entraîne un cycle de changements d'exigences nécessitant un niveau d'agilité plus élevé, la raison pour laquelle Power Platform a été choisi comme choix de technologie.
-\\\\
+
 Le stage a débuté le 1er mars pour une durée de 6 mois. Il en résulte le planning
 suivant :
-\\
+
 \begin{figure}[!h]
     \centering
     \includegraphics[scale=0.27,keepaspectratio]{Rapport de stage PFE chez DXC/figures/planification_projet_cropped.png}
     \caption{Diagramme de Gantt}
 \end{figure}
 
+
+
+
+\\
 Le projet est partagé en trois grandes étapes : 
 \\
 \begin{itemize}
-  \item La première est une phase de documentation dont les objectifs est de bien assimiler les différents composant de Microsoft Power Platform.
-  \item La phase de l'élaboration du cahier de charge, vu que le projet avait beaucoup de collaborateur cette dernière a pris du temps pour les mettre en accord sur les différentes fonctionnalités de l'application.
-  \item La phase de conception de l'application
-  \item La phase de réalisation de l'application où j'ai commencé par d'abord élaborer le frontend pour ensuite passer au backend en utilisant Power Apps et Power Automate.
-  \item Finalement la validation de l'application par les différents membres de l'équipe ainsi que ça documentation.
+  \item La première est \textbf{une phase de documentation} dont les objectifs était de bien assimiler les différents composant de Microsoft Power Platform.
+  \\
+  \item \textbf{La phase de l'élaboration du cahier de charge}, vu que le projet avait beaucoup de collaborateur cette dernière a pris du temps pour les mettre en accord sur les différentes fonctionnalités de l'application.
+  \\
+  \item \textbf{La phase de conception de l'application} qui a permis de construire un systeme qui relie plusieurs entité et outils mais surtout elimine les fichiers Excel du processus.
+  \\
+  \item \textbf{La phase de réalisation de l'application} où j'ai commencé par d'abord élaborer le frontend pour ensuite passer au backend en utilisant Power Apps et Power Automate.
+  \\
+  \item Finalement \textbf{la phase de validation de l'application} par les différents membres de l'équipe ainsi que ça documentation.
+  \\
 \end{itemize}
 \\
 
 \subsection{Gestion et suivi du projet}
-Pour ce qui est de la gestion et suivi des nouvelle demande ainsi qu'erreur dans le projet, \textbf{Kanban} était l'outil utilisé qui permettait de voir les nouveaux problemes ainsi que nouvelle demande du client comme montrer dans la figure ci-dessous:
+Pour ce qui est de la gestion et suivi des nouvelle fonctionalité ainsi qu'erreur dans le projet. \textbf{Kanban} était l'outil utilisé pour permettre ce suivi, comme le montre la figure suivante:
 
 \begin{figure}[!h]
     \centering

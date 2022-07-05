@@ -19,22 +19,39 @@ fonctionnels, après avoir décrit les processus métiers, et les règles de ges
 \newpage
 
 \section{Description du projet}
-\subsection{Objectifs fonctionnels du projet:}
+\subsection{Objectifs fonctionnels du projet}
 
-L’objectif principal du projet est la facilitation de saisie des données ainsi que l’aide à la prise de décision, de passer d'un modele de travail qui utilisait plusieurs fichier excel partager avec plusieur teams pour prendre la decision et s'organiser vers un model qui est centré sur une seul application Power Apps qui met en relation les differentes entittés du system.
+L’objectif principal du projet est la facilitation de saisie des données ainsi que l’aide à la prise de décision, de passer d’un modèle de travail qui utilisait plusieurs fichier Excel partager avec plusieurs Equipe pour prendre la décision et s’organiser vers un modèle qui est centré sur une seul application Power Apps qui met en relation les différentes entités du system. 
 \\
 
-Dans un premier temps, il s’agit de définir de manière claire et précise les besoins et les attentes d’un système d’information permettant d’automatiser les remontées de l’équipe vers différentes entités, ainsi que la saisie des Deals, choix des Squads, l’affectation des ressources et l’affichage des statistiques dans un dashboard avec differents filtre.
+Dans un premier temps, il s’agit de définir de manière claire et précise les besoins et les attentes d’un système d’information permettant d’automatiser les remontées de l’équipe vers différentes entités, ainsi que la saisie des Deals, choix des Squads, l’affectation des ressources et l’affichage des statistiques dans un tableau de bord avec différents filtres. 
 \\
 
 Fournir une visibilité sur les prévisions financières au niveau du compte et du portefeuille, y compris les changements de revenus mensuels et trimestriels. Ce système devra être capable de gérer les relations clients, la saisie des différents deals pour assurer un suivi par les Services Lines, un Reporting et un suivi des indicateurs.
 \\
 
-Dans un second temps, le développement du système d’information devra permettre
-de garder la trace de tous les échanges afin de pouvoir établir des statistiques et prendre la décision du gain du deal. 
+Dans un second temps, le développement du système d’information devra permettre de garder la trace de tous les échanges afin de pouvoir établir des statistiques et prendre la décision du gain du deal.
 \\
 
 Tout au long du projet, la notion de passage à l’échelle devra être prise en compte. L’objectif à long terme de la conception et du développement d’un tel système d’information est de pouvoir être utilisé par tous les acteurs de l’entreprise.
+
+\subsection{Fonctionnalités ciblées}
+
+Les fonctionnalités attendues de l'application sont les suivantes :
+\\
+
+\begin{itemize}
+    \item \textbf{Ajout de la masse salariale}
+    \item \textbf{Réduction de la masse salariale}
+    \item \textbf{Optimisation de la masse salariale}
+    \item \textbf{Consultation des soumission de la masse salariale}
+    \item \textbf{Ajout d'un nouveau projet au niveau du DCT}
+    \item \textbf{Modification d'un projet au niveau du DCT}
+    \item \textbf{Fermeture d'un projet au niveau du DCT}
+    \item \textbf{Consultation des soumissions au niveau du DCT}
+    \item \textbf{Consultation des statistiques et tableau de bord}
+\end{itemize}
+
 
 \section{Contraintes du projet}
 
@@ -48,3 +65,32 @@ La gestion de la sécurité est la principale contrainte de notre système. L'ap
 
 Pour le développement de notre système, nous disposons d’une architecture
 existante sur laquelle nous devrons baser notre application. La structure de notre système doit être extensible pour la mettre en place facilement dans les autres unités de l’entreprise. De plus, le développement devra suivre toutes les normes techniques pour une meilleure performance, maintenance et facilité de mise à jour.
+
+\section{Etude de l'existant}
+
+Un GRC, acronyme du terme Gestion de la Relation Client, est un logiciel informatique permettant à une entreprise de gérer les relations qu’elle entretient avec ses clients.
+\\\\
+Le GRC permet à une entreprise d’optimiser les interactions et les relations avec ses clients, ses prospects, ses suspects, ses utilisateurs, ses partenaires, ses employés et ses fournisseurs. Ce suivi et l’établissement de ces relations permettent à l’entreprise de mieux comprendre les attentes de ses partenaires. Cela va aider l’entreprise à gagner de nouveaux clients, à les fidéliser et à améliorer son organisation.
+\\\\
+Chaque solution GRC est différente et à un but différent. Idéalement, une solution GRC devra être adaptée au type d’organisation, à la taille et au marché de l’entreprise qui l’utilise. Un même GRC peut être utilisé différemment par les collaborateurs d’une même entreprise. Certaines entreprises utilisent plusieurs solutions GRC simultanément afin de mieux convenir aux besoins de chacun de leurs collaborateurs.
+\\\\
+\newpage
+\\\\
+La pipe commerciale est toute la procédure pour gagner une opportunité offerte par le marché commençant par les premières intentions jusqu’à la signature du contrat.
+\\\\
+Aujourd’hui, la circulation de l’information dans une entreprise est devenue une stratégie de communication interne. En effet, lorsqu’elle circule bien, l’information favorise la communication et devient, de ce fait, facteur de cohésion, de motivation, de décision efficace et de créativité.
+\\\\
+Le présent système n’arrive pas à satisfaire les attentes de ses utilisateurs à cause du traitement et du fonctionnement manuelle de ce dernier.
+\\\\
+C'est pour cette raison, qu'a été déclaré comme besoin interne d'améliorer ce processus à l'aide d'une application Power Platform qui va permettre la bonne interprétation de l'information, la facilitation de saisie de données ainsi que l’aide à la prise de décision.
+\\
+
+Ce workflow représente le processus CRM de la gestion du pipe commercial entre le
+responsable et le commercial : 
+
+
+\begin{figure}[!h]
+    \centering
+    \includegraphics[scale=0.14,keepaspectratio]{Rapport de stage PFE chez DXC/figures/CRM Process.png}
+    \caption{Schéma descriptif de la pipe commerciale}
+\end{figure}
