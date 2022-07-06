@@ -1,0 +1,17 @@
+\newpage
+
+\titleformat % design des titres des chapitres
+{\chapter}
+[display]
+{\centering\normalfont\Large\scshape\bfseries}
+{\rule[3pt]{0.15\linewidth}{3pt}\quad\chaptertitlename~\thechapter\quad \rule[3pt] {0.15\linewidth}{3pt}}
+{0\baselineskip}%espace vertical entre chapitre et nom du chapitre
+{\rule{\linewidth}{0.5pt}\break\Huge}
+[\vspace{-0.5\baselineskip}\rule{\linewidth}{0.5pt}\vspace{0\baselineskip}]
+
+\let\clearpage\relax% Stop LaTeX from going to a new page; and
+\vspace*{5.5cm}%
+
+\chapter{Réalisation du projet}
+
+\newpage
