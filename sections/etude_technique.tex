@@ -105,6 +105,18 @@ La version actuelle est s'approche de la premiere version comme le montre la fig
 
 Comme le montre la figure suivante, la présence des fichier Excel est toujours là, les modifications ainsi que l'ajout des informations se fait toujours d'une façon semi-automatique (utilisation de flow pour quelque informations) et les review boards se font toujours d'une manière classique à l'aide de fichier Excel et power point, cela revient à la difficulté de mettre les différents collaborateurs en accord.
 
+\newpage
+\section{Modèle de données}
+
+La figure suivante represente l'architecture utilisée pour l'importation de la données: 
+\begin{figure}[!h]
+    \centering
+    \includegraphics[scale=0.4,keepaspectratio]{Rapport de stage PFE chez DXC/figures/data_model.png}
+    \caption{modèle de données}
+\end{figure}
+
+Pour l'importation de la donnée on peut voir l'existence de plusieurs fichier Excel l'avantage est que ces derniers pour la plupart sont générer automatiquement de la part des outils interne de l'entreprise, ce qui permet de rapidement les regrouper avec un seul Dataflow effectuer les différents changements (ETL) et les utilisé dans notre application ou bien pour créer des tableaux de bords.
+
 \section{Architecture logiciel : Power Platform }
 
 \subsection{Power Apps }
