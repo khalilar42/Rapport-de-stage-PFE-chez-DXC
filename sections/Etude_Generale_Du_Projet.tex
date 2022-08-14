@@ -41,15 +41,14 @@ Le but de ce projet est de réaliser une solution Power Platform pour la facilit
 Ma mission durant ce stage de fin d’études consiste à améliorer cela, les principaux module que j'ai developpé avec l'équipe Power Platform sont:
 \\
 \begin{itemize}
-  \item Payroll FTE Existing Account
-  \item Payroll FTE Migration/LPI
-  \item Payroll FTE Productivity
-  \item Payroll FTE New Reduction
-  \item Payroll View Submission
-  \item DCT Create a new Project
-  \item DCT Update a Project
-  \item DCT Close  a  Project
-  \item DCT View Submission Project
+  \item DCT Position Level Management - Create Demand
+  \item DCT Position Level Management - Update Demand
+  \item DCT Position Level Management - View Submissions
+  \item DCT Project Level Management - Create New Project
+  \item DCT Project Level Management - Update An Existing Project
+  \item DCT Project Level Management - Close An Existing Project
+  \item DCT Demand Team - Demand Validation Check
+  \item DCT Demand Team - DCT Position Export
 \end{itemize}
 
 \subsection{Registre de Gestion des Risques} 
@@ -99,7 +98,7 @@ Nous avons opté pour cette méthode car la mise en œuvre de notre projet néce
     \item \textbf{Fin de sprint}: 
         À l’issue du Sprint, nous possédons un produit potentiellement livrable qui fait l’objet d’une démonstration lors de la revue du Sprint.
     \\    
-    \item \textbf{Carnet de produit}: 
+    \item \textbf{Rétrospective de Sprint}: 
         Le cycle se termine enfin par la rétrospective de Sprint. Et ensuite, il n’y a plus qu’à répéter tout cela…
 \end{itemize}
 
@@ -155,12 +154,9 @@ La méthode Scrum définit trois rôles qui sont :
 
 \end{itemize}
 
-
-
 \subsection{Planification du projet}
-
 Le projet était nouveau pour ma part, Il utilise power platform une technologie non abordée le long de mon parcours scolaire. Du coup, une planification rigoureuse s’est imposée pour prévoir le déroulement du projet.
-\\ 
+
 D'autre part le projet souffre de l'impossibilité de verrouiller les exigences entre les versions et cela est dû à la complexité des processus que le projet tente de résoudre, ce qui entraîne un cycle de changements d'exigences nécessitant un niveau d'agilité plus élevé, la raison pour laquelle Power Platform a été choisi comme choix de technologie.
 
 Le stage a débuté le 1er mars pour une durée de 6 mois. Il en résulte le planning
@@ -168,7 +164,7 @@ suivant :
 
 \begin{figure}[!h]
     \centering
-    \includegraphics[scale=0.27,keepaspectratio]{Rapport de stage PFE chez DXC/figures/planification_projet_cropped.png}
+    \includegraphics[scale=0.25,keepaspectratio]{Rapport de stage PFE chez DXC/figures/planification_projet_cropped.png}
     \caption{Diagramme de Gantt}
 \end{figure}
 
@@ -193,13 +189,60 @@ Le projet est partagé en trois grandes étapes :
 \\
 
 \subsection{Gestion et suivi du projet}
-Pour ce qui est de la gestion et suivi des nouvelle fonctionalité ainsi qu'erreur dans le projet. \textbf{Kanban} était l'outil utilisé pour permettre ce suivi, comme le montre la figure suivante:
+Pour ce qui est de la gestion et suivi des nouvelle fonctionalité ainsi qu'erreur dans le projet. \textbf{Azure Boards} était l'outil utilisé pour permettre ce suivi.
+
+Cette image represente quelque elements du backlog :
 
 \begin{figure}[!h]
     \centering
-    \includegraphics[scale=0.35,keepaspectratio]{Rapport de stage PFE chez DXC/figures/kanban.png}
-    \caption{Gestion et suivi du projet}
+    \includegraphics[scale=0.32,keepaspectratio]{Rapport de stage PFE chez DXC/figures/AzureBoards_Backlog.jpg}
+    \caption{Azure Boards : Backlog}
 \end{figure}
+
+Pour hiérarchiser notre projet nous avons utilisé 4 catégories dans Azure Boards :
+\\
+
+\begin{itemize}
+  \item \textbf{Epic:} Représentant un module ou un groupe de fonctionnalité.
+  \\
+  \item \textbf{Feature :} Représentant les différentes fonctionnalités voulu pour le module.
+  \\
+  \item \textbf{Product backlog Item :} Qui représente les screens qui vont être créer pour ce module.
+  \\
+  \item \textbf{Tasks:} Ensuite viens les taches qui vont être effectué pour la création de ces derniers.
+\end{itemize}
+
+\\\\
+
+A part cela nous avons aussi utilisé deux autres catégories :
+\\
+
+\begin{itemize}
+  \item \textbf{Bug :} Pour le suivi et l’assignation des nouveau bugs trouvé.
+  \\
+  \item \textbf{Test Case :} Pour le testing des fonctionnalités de l’applications.
+\end{itemize}
+
+\vspace{\baselineskip}
+Après avoir définit les différents items dans le backlog vient l'étape du verrouillage des différents items qui seront inclus dans le sprint de développement, le Product Owner ainsi que le Scrum Master discute des priorités des différentes taches et les ajoute en se basant sur cette dernière au sprint de développement.
+Ensuite vient l'étape d'estimation des efforts nécessaire pour chaque tache pour ne pas dépacer la capacité de l'équipe de développement et ne pas pouvoir terminer toutes les taches du sprint, L'estimation se fait avec des sessions de planning poker.Donc après le sprint planning la phase de réalisation et d’implémentation démarre en assignant chaque tâche à une personne.
+
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale=0.34,keepaspectratio]{Rapport de stage PFE chez DXC/figures/Sprint_TaskBoard.jpg}
+    \caption{Azure Boards : Sprint Task Board}
+\end{figure}
+
+Tous les matins à 9H on fait une réunion qui regroupe l'équipe de développement ainsi que le Product Owner et le Scrum Master sur Microsoft Teams dans laquelle on discute de ce qu’on a fait hier et ce qu’on va faire aujourd’hui et les points de blocage, ces derniers sont listés dans une carte Trello comme le montre la figure suivante :
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale=0.28,keepaspectratio]{Rapport de stage PFE chez DXC/figures/Trello_Daily.jpg}
+    \caption{Trello : Daily meetings}
+\end{figure}
+
+
 
 
 \section{Conclusion}
