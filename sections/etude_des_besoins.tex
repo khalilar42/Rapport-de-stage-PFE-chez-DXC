@@ -41,15 +41,20 @@ Les fonctionnalités attendues de l'application sont les suivantes :
 \\
 
 \begin{itemize}
-    \item \textbf{Ajout de la masse salariale}
-    \item \textbf{Réduction de la masse salariale}
-    \item \textbf{Optimisation de la masse salariale}
-    \item \textbf{Consultation des soumission de la masse salariale}
-    \item \textbf{Ajout d'un nouveau projet au niveau du DCT}
-    \item \textbf{Modification d'un projet au niveau du DCT}
-    \item \textbf{Fermeture d'un projet au niveau du DCT}
-    \item \textbf{Consultation des soumissions au niveau du DCT}
-    \item \textbf{Consultation des statistiques et tableau de bord}
+    \item \textbf{Account Process - Ajout de la masse salariale}
+    \item \textbf{Account Process - Future client}
+    \item \textbf{Account Process - Roll-Off / Roll-On}
+    \item \textbf{Account Process - Modification de la demande}
+    \item \textbf{Account Process - Placeholder Modification de la demande}
+    \item \textbf{Account Process - Consultation des soumissions}
+    \item \textbf{Interlock submission with Service Line}
+    \item \textbf{Interlock submission with Account}
+    \item \textbf{DCT Position Level Management - Creation de demande}
+    \item \textbf{DCT Position Level Management - Mise a jour de la demande}
+    \item \textbf{DCT Position Level Management - Consultation des soumissions}
+    \item \textbf{DCT Position Level Management - Creation des projets}
+    \item \textbf{DCT Position Level Management - Mise a jour d'un projet existant}
+    \item \textbf{DCT Position Level Management - Fermeture d'un projet existant}
 \end{itemize}
 
 
@@ -68,31 +73,24 @@ existante sur laquelle nous devrons baser notre application. La structure de not
 
 \section{Etude de l'existant}
 
-Un GRC, acronyme du terme Gestion de la Relation Client, est un logiciel informatique permettant à une entreprise de gérer les relations qu’elle entretient avec ses clients.
-\\\\
-Le GRC permet à une entreprise d’optimiser les interactions et les relations avec ses clients, ses prospects, ses suspects, ses utilisateurs, ses partenaires, ses employés et ses fournisseurs. Ce suivi et l’établissement de ces relations permettent à l’entreprise de mieux comprendre les attentes de ses partenaires. Cela va aider l’entreprise à gagner de nouveaux clients, à les fidéliser et à améliorer son organisation.
-\\\\
-Chaque solution GRC est différente et à un but différent. Idéalement, une solution GRC devra être adaptée au type d’organisation, à la taille et au marché de l’entreprise qui l’utilise. Un même GRC peut être utilisé différemment par les collaborateurs d’une même entreprise. Certaines entreprises utilisent plusieurs solutions GRC simultanément afin de mieux convenir aux besoins de chacun de leurs collaborateurs.
-\\\\
-\newpage
-\\\\
-La pipe commerciale est toute la procédure pour gagner une opportunité offerte par le marché commençant par les premières intentions jusqu’à la signature du contrat.
-\\\\
 Aujourd’hui, la circulation de l’information dans une entreprise est devenue une stratégie de communication interne. En effet, lorsqu’elle circule bien, l’information favorise la communication et devient, de ce fait, facteur de cohésion, de motivation, de décision efficace et de créativité.
 \\\\
-Le présent système n’arrive pas à satisfaire les attentes de ses utilisateurs à cause du traitement et du fonctionnement manuelle de ce dernier.
+Le présent système n’arrive pas à satisfaire les attentes de ses utilisateurs à cause du traitement et du fonctionnement manuelle de ce dernier, il existe plusieurs sources de données qui ne sont pas corrélées ou facilement directement liés dans une vue unique automatisée qui empêche une gestion efficace des coûts et des revenus.
 \\\\
+Cette incapacité à aligner étroitement les mouvements de coûts sur les mouvements de revenus a entraîné des complications et des erreurs dans le suivi et la déclaration des
+action decroissance,action dans la région EMEA.
+\\
+
 Pour cette raison, Value Attainement tool a été déclaré comme besoin interne par le service Line APPS, permettant les bonnes interprétations des informations, la facilitation de saisie des données ainsi que l’aide à la prise de décision.
 \\
 
-Ce workflow représente le processus CRM de la gestion du pipe commercial entre le
-responsable et le commercial : 
+Le workflow suivant représente le processus de gestion de demande:
 
 
 \begin{figure}[!h]
     \centering
-    \includegraphics[scale=0.14,keepaspectratio]{Rapport de stage PFE chez DXC/figures/crm_process.png}
-    \caption{Schéma descriptif de la pipe commerciale}
+    \includegraphics[scale=0.55,keepaspectratio]{Rapport de stage PFE chez DXC/figures/VA_Buisness_Process.jpg}
+    \caption{Schéma descriptif de la gestion de demande}
 \end{figure}
 
 \newpage
@@ -104,14 +102,17 @@ Pour répondre aux besoins réels et urgents en termes de contraintes fonctionne
 \\
 \begin{itemize}
     \item \textbf{Gestion de la masse salariale:} L'application permet à l'utilisateur de gérer sa masse salariale en ajoutant ou bien réduire cette dernière mais aussi l'optimiser.
-    \\
+    
     \item \textbf{Consultation des soumission de la masse salariale:} Consulter les différentes soumissions sur la transformation de la masse salariale dans une seul page et aussi la sélection puis la modification possible de chaque soumission.
-    \\
+    
     \item \textbf{Gestion de projet DCT:} Ajout d'un nouveau projet DCT, modification de ce dernier et aussi la fermeture du projet.
-    \\
-    \item \textbf{Consultation des soumissions au niveau du DCT:} Consulter les différentes soumissions.
-    \\
-    \item \textbf{Consultation des statistiques et tableau de bord:} Accéder à un tableau de bord reliant tous les statistiques importantes au vu d'un deal avec plusieurs filtres tout cela dans une seule page
+    
+    \item \textbf{Gestion de demande DCT:} Ajout d'un nouvelle demande, modification d'une demande.
+    
+    \item \textbf{Consultation des soumissions au niveau du DCT:} Consulter les différentes soumissions du DCT.
+    
+    \item \textbf{Consultation des soumissions au niveau du compte:} Consulter les différentes soumissions du compte.
+    
 \end{itemize}
 
 \subsection{Besoins fonctionnels : Fonctionnalités}
@@ -149,6 +150,16 @@ Ce bloc fonctionnel est composé de trois ecran et il permet la gestion des proj
 \end{itemize}
 
 \vspace{0.5cm}
+\textbf{\color{red}Bloc fonctionnel : Gestion de demande DCT}
+    
+Ce bloc fonctionnel est composé de trois ecran et il permet la gestion des demandes: 
+\\
+\begin{itemize}
+    \item L'ajout d'une nouvelle position.
+    \item La modification d'une ancienne position.
+\end{itemize}
+
+\vspace{0.5cm}
 \textbf{\color{red}Bloc fonctionnel : Consultation des soumissions au niveau du DCT}
     
 Ce bloc fonctionnel est composé d'un seul ecran qui relie les differentes soumissions des projets DCT.
@@ -157,11 +168,11 @@ Ce bloc fonctionnel est composé d'un seul ecran qui relie les differentes soumi
 \end{itemize}
 
 \vspace{0.5cm}
-\textbf{\color{red}Bloc fonctionnel : Consultation des statistiques et tableau de bord}
+\textbf{\color{red}Bloc fonctionnel : Validation des demande DCT}
     
-Ce bloc fonctionnel est composé d'un seul ecran qui relie les differentes soumissions des projets DCT.
+Ce bloc fonctionnel est composé d'un seul ecran dans lequel on confirme et valide l'entré
 \begin{itemize}
-    \item L’affichage des statistiques des deals.
+    \item L’affichage des soumission ainsi que leur validation
 \end{itemize}
 
 \subsection{Besoins non fonctionnels}
@@ -178,6 +189,7 @@ système.
     \item \textbf{Convivialité:} Le système doit être compréhensible, documenté, et son
 utilisation doit être facile.
 \end{itemize}
+\newpage
 
 \subsection{Acteurs}
 Il s’agit de quatre acteurs principaux agissant dans le système :
@@ -185,9 +197,7 @@ Il s’agit de quatre acteurs principaux agissant dans le système :
 \begin{itemize}
     \item \textbf{BizDev:} Saisie et évolution du pipe (Deals / calcul des Revenue Mensuels
 et TCV…)
-    \item \textbf{Service Lines:} Compléter les données relatives aux ressources du deal (HC à facturer / HC à recruter)
-    \item \textbf{Réutilisabilité:} Il doit être possible de réutiliser certains modules du
-système.
+    \item \textbf{Service Lines:} Compléter les données relatives aux ressources du deal 
     \item \textbf{Ressource Humaine:} Compléter la donnée relative aux ressources (Starting Date / Hiring
 Date)
     \item \textbf{Finance:} Confirmer la données et verifier les budgets.

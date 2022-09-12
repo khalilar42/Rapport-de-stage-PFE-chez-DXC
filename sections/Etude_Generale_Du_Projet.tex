@@ -21,14 +21,14 @@ d’identification et planification du projet.
 \section{Périmètre du projet}
 \subsection{Problématique générale}
 
-Actuellement, il n’existe aucune solution pour le suivi d’une pipe commerciale. La méthodologie utilisée pour l’instant est basée sur plusieurs fichiers Excel qui sont partagés entre plusieurs entités. Il est pertinent de libérer ce style classique adopté par les commerciaux et les responsables des ressources humaines qui est basé sur le calcul manuelle des couts ainsi que l'utilisation excessive d'Excel pour classifier tous les acteurs matériaux ou humanitaires qui participent dans la construction d’un « Deal ». 
+Actuellement, il n’existe aucune solution pour la plannification des effectifs. La méthodologie utilisée pour l’instant est basée sur plusieurs fichiers Excel qui sont partagés entre plusieurs entités. Il est pertinent de libérer ce style classique adopté par les commerciaux et les responsables des ressources humaines qui est basé sur le calcul manuelle des couts ainsi que l'utilisation excessive d'Excel pour classifier tous les acteurs matériaux ou humanitaires qui participent dans la construction d’un « Deal ». 
 \\
 
-Donc notre problématique majeure est de définir d’une manière claire et précise les besoins et les attentes d’un système d’information permettant d’automatiser les remontées de l’équipe vers différentes entités, ainsi que la saisie des Deals, choix des Squads, l’affectation des ressources et aussi la gestion de la relation client. D’une autre part garder la trace de tous les échanges afin de pouvoir établir des statistiques ainsi que des tableau de bord pour prendre la décision du gain du deal.
+Donc notre problématique majeure est de définir d’une manière claire et précise les besoins et les attentes d’un système d’information permettant d’automatiser les remontées de l’équipe vers différentes entités, ainsi que la saisie des Deals, choix des Squads, l’affectation des ressources. D’une autre part garder la trace de tous les échanges afin de pouvoir établir des statistiques ainsi que des tableau de bord pour prendre la décision du gain du deal.
 
 \subsection{But du projet}
 
-Le but de ce projet est de réaliser une solution Power Platform pour la facilitation et la gestion du système d’information. Un outil qui va permettre de digitaliser le processus de gestion de Pipe commercial et de se libérer de l’utilisation exagéré des fichiers Excel pour passer vers l’utilisation de base de données plus robuste et efficace. L’application a pour vision de :  
+Le but de ce projet est de réaliser une solution Power Platform qui va permettre de digitaliser le processus de plannification de ressource et de se libérer de l’utilisation exagéré des fichiers Excel pour passer vers l’utilisation de base de données plus robuste et efficace. L’application a pour vision de :  
 \\
 
 \begin{itemize}
@@ -41,6 +41,13 @@ Le but de ce projet est de réaliser une solution Power Platform pour la facilit
 Ma mission durant ce stage de fin d’études consiste à améliorer cela, les principaux module que j'ai developpé avec l'équipe Power Platform sont:
 \\
 \begin{itemize}
+  \item Account Process - View submission
+  \item Account Process - Add Demand to account - Existing Account
+  \item Account Process - Add Demand to account - New Logo
+  \item Account Process - Add Demand to account - Roll-Off \ Roll-On
+  \item Account Process - Modification of demand - Modification of demand
+  \item Account Process - Modification of demand - Placeholder Modification
+  \item Account Process - Interlock Submission from account 
   \item DCT Position Level Management - Create Demand
   \item DCT Position Level Management - Update Demand
   \item DCT Position Level Management - View Submissions
@@ -48,7 +55,6 @@ Ma mission durant ce stage de fin d’études consiste à améliorer cela, les p
   \item DCT Project Level Management - Update An Existing Project
   \item DCT Project Level Management - Close An Existing Project
   \item DCT Demand Team - Demand Validation Check
-  \item DCT Demand Team - DCT Position Export
 \end{itemize}
 
 \subsection{Registre de Gestion des Risques} 
@@ -155,14 +161,14 @@ La méthode Scrum définit trois rôles qui sont :
 \end{itemize}
 
 \subsection{Planification du projet}
-Le projet était nouveau pour ma part, Il utilise power platform une technologie non abordée le long de mon parcours scolaire. Du coup, une planification rigoureuse s’est imposée pour prévoir le déroulement du projet.
-
+Le projet était nouveau pour ma part, Il utilise Power Platform une technologie non abordée le long de mon parcours scolaire. Du coup, une planification rigoureuse s’est imposée pour prévoir le déroulement du projet.
+\\[0.5cm]
 D'autre part le projet souffre de l'impossibilité de verrouiller les exigences entre les versions et cela est dû à la complexité des processus que le projet tente de résoudre, ce qui entraîne un cycle de changements d'exigences nécessitant un niveau d'agilité plus élevé, la raison pour laquelle Power Platform a été choisi comme choix de technologie.
-
+\\[0.5cm]
 Le stage a débuté le 1er mars pour une durée de 6 mois. Il en résulte le planning
 suivant :
 
-\begin{figure}[!h]
+\begin{figure}[H]
     \centering
     \includegraphics[scale=0.25,keepaspectratio]{Rapport de stage PFE chez DXC/figures/planification_projet_cropped.png}
     \caption{Diagramme de Gantt}
@@ -181,9 +187,9 @@ Le projet est partagé en trois grandes étapes :
   \\
   \item \textbf{La phase de conception de l'application} qui a permis de construire un systeme qui relie plusieurs entité et outils mais surtout elimine les fichiers Excel du processus.
   \\
-  \item \textbf{La phase de réalisation de l'application} où j'ai commencé par d'abord élaborer le frontend pour ensuite passer au backend en utilisant Power Apps et Power Automate.
+  \item \textbf{La phase de réalisation de l'application} où j'ai commencé par d'abord élaborer le front-end pour ensuite passer au backend en utilisant Power Apps et Power Automate.
   \\
-  \item Finalement \textbf{la phase de validation de l'application} par les différents membres de l'équipe ainsi que ça documentation.
+  \item \textbf{La phase de validation de l'application} par les différents membres de l'équipe ainsi que ça documentation.
   \\
 \end{itemize}
 \\
@@ -203,23 +209,20 @@ Pour hiérarchiser notre projet nous avons utilisé 4 catégories dans Azure Boa
 \\
 
 \begin{itemize}
+
   \item \textbf{Epic:} Représentant un module ou un groupe de fonctionnalité.
-  \\
   \item \textbf{Feature :} Représentant les différentes fonctionnalités voulu pour le module.
-  \\
   \item \textbf{Product backlog Item :} Qui représente les screens qui vont être créer pour ce module.
-  \\
   \item \textbf{Tasks:} Ensuite viens les taches qui vont être effectué pour la création de ces derniers.
 \end{itemize}
 
-\\\\
+\vspace{0.5cm}
 
 A part cela nous avons aussi utilisé deux autres catégories :
 \\
 
 \begin{itemize}
   \item \textbf{Bug :} Pour le suivi et l’assignation des nouveau bugs trouvé.
-  \\
   \item \textbf{Test Case :} Pour le testing des fonctionnalités de l’applications.
 \end{itemize}
 
@@ -234,7 +237,7 @@ Ensuite vient l'étape d'estimation des efforts nécessaire pour chaque tache po
     \caption{Azure Boards : Sprint Task Board}
 \end{figure}
 
-Tous les matins à 9H on fait une réunion qui regroupe l'équipe de développement ainsi que le Product Owner et le Scrum Master sur Microsoft Teams dans laquelle on discute de ce qu’on a fait hier et ce qu’on va faire aujourd’hui et les points de blocage, ces derniers sont listés dans une carte Trello comme le montre la figure suivante :
+Tous les matins à 9H on effectue une réunion qui regroupe l'équipe de développement ainsi que le Product Owner et le Scrum Master sur Microsoft Teams dans laquelle on discute de ce qu’on a fait hier et ce qu’on va faire aujourd’hui et les points de blocage, ces derniers sont listés dans une carte Trello comme le montre la figure suivante :
 
 \begin{figure}[H]
     \centering
@@ -242,10 +245,7 @@ Tous les matins à 9H on fait une réunion qui regroupe l'équipe de développem
     \caption{Trello : Daily meetings}
 \end{figure}
 
-
-
-
 \section{Conclusion}
 
 Dans ce chapitre j’ai présenté l’étude générale du projet et le choix de la méthodologie ainsi
-que le déroulement du projet,son but, les differents livrable, la planification du projet, et finalement la gestion et suivi de ce dernier. Le chapitre suivant se concentrera sur l’étude des besoins du projet.
+que le déroulement du projet, son but, les differents livrable, la planification du projet, et finalement la gestion et suivi de ce dernier. Le chapitre suivant se concentrera sur l’étude des besoins du projet.
