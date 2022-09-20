@@ -33,7 +33,7 @@ Elle contient aussi un aperçu rapide du nombre de compte affecté pour l'utilis
 On peut aussi etre re-directionner vers une application d'aide ou bien envoyer un email en cas de problem a la mailbox de support. 
 
 \newpage
-\section{Ajout de masse salariale}
+\section{Compte - Ajout de masse salariale}
 Pour l'ajout de masse salariale au niveau du compte 4 option se presente :
 
 \begin{itemize}
@@ -89,3 +89,104 @@ Dans la 1er etape l'utilisateur doit saisire l'OPX-ID mais aussi l'identificateu
 Pour les placeholders se sont des submission pour un future besoin, aprés avoir créer un placeholder ce dernier peut etre convertis ensuite en une entré VA dans la vue de submission, La soumission de cette entré se fait de la meme maniére que pour l'ajout de demande. 
 
 
+\section{Compte - Modification de la masse salariale}
+
+\subsection{Modification de la masse salariale}
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale=0.4,keepaspectratio]{Rapport de stage PFE chez DXC/figures/modification_of_demand.png}
+    \caption{Compte - Modification de la masse salariale}
+\end{figure}
+
+La modification de demande peut etre soit un "Run-Off" c'est a dire une personne qui quitte son poste ou bien une "extension" ou la personne voit sont contract étendue, le processus est a peu prés le meme, l'utilisateur choisi l'employé ensuite remplie les information necessaire de la deuxieme étape et par la suite saisi son entrés.
+
+\newpage
+
+Dans la plupart des cas l'utilisateur a plusieurs entré a saisire dans ces deux lever, choisir a chaque fois un employé remplire les meme information puis sasire l'entré peut devenir redondant c'est pour cela qu'un module de multi-creation a été fait :
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale=0.4,keepaspectratio]{Rapport de stage PFE chez DXC/figures/multi_modification_of_demand.png}
+    \caption{Compte - Modification de la masse salariale en grand nombre}
+\end{figure}
+
+La seul difference entre les deux module et le fait que l'utilisateur peut choisir plusieurs utilisateur a la fois ces dernier auront les meme information et le systeme va créer automatiquement une entré par utilisateur selectionné.
+
+\newpage
+
+\subsection{Placeholder Modification de la masse salariale}
+
+De la meme maniere que le placeholder pour l'ajout de demande, le placeholder de modification de demande permet a l'utilisateur de créer des entrée pour des future besoin :
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale=0.4,keepaspectratio]{Rapport de stage PFE chez DXC/figures/placeholder_modification_of_demand.jpg}
+    \caption{Placeholder - Modification de la masse salariale}
+\end{figure}
+
+Ce dernier ne contient pas tout les informations necessaire pour une entrée run-off mais peut etre ensuite convertit en une entrée VA avec tout les information necessaire.
+
+\newpage
+\section{Compte - Consultation des soumissions}
+
+Le module de consultation des soumissions est composé de plusieurs filtre qui vont permettre a l'utilisateur de facilement trouver son entrée 
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale=0.4,keepaspectratio]{Rapport de stage PFE chez DXC/figures/view_submission.jpg}
+    \caption{Compte - Consultation des soumissions}
+\end{figure}
+
+En plus de cela en cliquant sur une entré nous avons un menu latéral qui vas nous permettre de modifier les information de l'entrer puise enregistre, ou bien 
+dupliquer l'entrée mais aussi créer une entrée DCT a partir de cette derniere :
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale=0.4,keepaspectratio]{Rapport de stage PFE chez DXC/figures/account_view_side_menu.png}
+    \caption{Compte - Consultation des soumissions - Menu latéral}
+\end{figure}
+
+\section{DCT Position Level Management}
+
+\subsection{DCT Position Level Management - Creation de demande}
+
+DCT est l'acronyme de Demand creation template, Pour ce screen l'utilisateur peut créer une demande de croissance : 
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale=0.4,keepaspectratio]{Rapport de stage PFE chez DXC/figures/DCT_Create.png}
+    \caption{DCT Position Level Management - Creation de demande }
+\end{figure}
+
+Le formulaire est composée de plusieurs champ a remplire avec differentes information, la plupart sont automatiquement remplie a travers les information precedente, ces derniers sont aussi vérifier pour n'avoir que des donnée valide.
+
+\subsection{DCT Position Level Management - Mise a jour de la demande}
+
+Ce screen permet de saisire une modification au niveau d'un DCT, il a le meme principe que le precedent : 
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale=0.4,keepaspectratio]{Rapport de stage PFE chez DXC/figures/DCT_Update.png}
+    \caption{DCT Position Level Management - Mise a jour de la demande}
+\end{figure}
+
+\subsection{DCT Position Level Management - Consultation des soumissions}
+
+Aprés avoir saisit l'entrée l'utilisateur est envoyé vers le screen de consultation des soumissions:
+
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale=0.4,keepaspectratio]{Rapport de stage PFE chez DXC/figures/DCT_view_submission.png}
+    \caption{DCT Position Level Management - Consultation des soumissions}
+\end{figure}
+
+Dans ce dernier nous avont les differents information saisit par l'utilisateur. en cliquant sur l'entrée un menu apparait qui contient quelque bouton, le premier permet de supprimé une entré en cas d'erreur, le deuxiem edit est utilisé pour modifier l'entrée pour corrigé une erreur, il y'a aussi l'option du multi duplicate cette derniere permet a l'utilisateur de dupliquer une entrée en plusieurs si il veut par exemple modifier que quelque information pour chaque entrée et finalement la possibiliter d'attacher un agrément exceptionnel si ce dernier est demander par les personnes qui inspecte l'entrée, d'ailleur en peut voir en haut un commentaire demander a ce dernier d'ajouter le fichier d'agréement.
+
+\subsection{DCT Position Level Management - Validation des entrée}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale=0.4,keepaspectratio]{Rapport de stage PFE chez DXC/figures/DCT_demand_validation_checks.png}
+    \caption{DCT Position Level Management - Validation des entrée}
+\end{figure}

@@ -27,13 +27,11 @@ l’architecture technique et applicative du projet
 \end{figure}
 
 
-Pour le développement de la solution nous avons utilisé Microsoft Power Platform qui permet la réalisation d'application web/mobile en low-code voire no-code. 
+Pour le développement de la solution nous avons utilisé Microsoft Power Platform qui permet la réalisation d'application web/mobile en "low-code" voire "no-code". 
 \\
 \\
-Le choix de ce dernier n'est pas anodin, en effet comme dit précédemment le projet souffrait de difficulté pour le verrouillage des exigences, notre client changeais d’avis tout le temps et il fallait pouvoir suivre ce changement, l’utilisation de technologie web très stricte aurait compliqué la tâche, tandis que l’environnement power platform nous a donné une sorte de flexibilité et a permis de toujours corriger ainsi que modifier les fonctionnalités selon le besoin du client dans des délais records.
+Le choix de cette dernière n'est pas anodin, en effet comme dit précédemment le projet souffrait de difficulté pour le verrouillage des exigences, notre client changeais d’avis tout le temps et il fallait pouvoir suivre ce changement, l’utilisation de technologie web très stricte aurait compliqué la tâche, tandis que l’environnement \textbf{Power Platform} nous a donné une sorte de flexibilité et a permis de toujours corriger ainsi que modifier les fonctionnalités selon le besoin du client dans des délais records.
 \\
-
-
 
 Les principaux composant de microsoft power platform sont:
 \\
@@ -51,7 +49,7 @@ Les principaux composant de microsoft power platform sont:
 
 \section{Architecture fonctionnelle}
 
-Le projet Vallue Attainement consiste à mettre en place un système permettant un
+Le projet \textbf{Vallue Attainement Tool} consiste à mettre en place un système permettant un
 échange entre différentes entités (RH, SL, Finance et Biz-DEV).
 \\
 
@@ -65,7 +63,7 @@ L'architecture a été en pensé en trois version, l'architecture utilisée actu
     \caption{Architecture Fonctionnelle - Version 1}
 \end{figure}
 
-Donc on a une élimination des fichier Excel utilisée auparavant pour cette fois-ci offrir à l'utilisateur les données des différents outils DXC extraite de façon automatique mais aussi la main pour saisir les nouvelles données directement dans l'application pour les clients ainsi que les Service Lines et puis les stocker dans une base de données (Dataverse) et non un fichier Excel pour à la fin créer des tableaux de bord Power BI.
+Donc on a une élimination des fichier Excel utilisée auparavant pour cette fois-ci offrir à l'utilisateur les données des différents outils DXC extraite de façon automatique mais aussi la main pour saisir les nouvelles données directement dans l'application pour les clients ainsi que les Service Lines et puis les stocker dans une base de données (Dataverse) et non un fichier Excel pour finalement réaliser des tableaux de bord Power BI.
 
 
 \newpage
@@ -78,7 +76,7 @@ Dans la deuxieme version on va aussi relier la finance avec l'application pour p
     \caption{Architecture Fonctionnelle - Version 2}
 \end{figure}
 
-Donc encore une fois l'élimination des fichier Excel, mais aussi une liaison entre la finance et les différents clients ainsi que les services lines, on va aussi ajouter une extraction automatique du DCT form qui va être ensuite envoyé au PPMC un outil interne de DXC pour saisir cette information et prendre la decision.
+Dance cette deuxième version on ajoute une liaison entre la finance les comptes mais aussi les services line, on va aussi ajouter une extraction automatique du DCT qui va être ensuite envoyé au PPMC un outil corporel interne de DXC pour enregistrer cette information et prendre la décision.
 
 \newpage
 \subsection{Architecture fonctionnelle - Version 3}
@@ -90,12 +88,12 @@ La troisieme et finale version est une liaison entre tout les acteurs du systeme
     \caption{Architecture Fonctionnelle - Version 3}
 \end{figure}
 
-La version finale relie toutes les entités du système, elle va permettre une multi-collaboration entre les différentes équipes, ce qui va accélérer notre pipe commerciale, améliorer la circulation de l'information au sein de l'entreprise, créer un de cohésion, permettre à l'entreprise de mieux gérer ces deals.
+La version finale relie toutes les entités du système, elle va permettre une multi-collaboration entre les différentes équipes, ce qui va accélérer la gestion des demande mais aussi améliorer la circulation de l'information au sein de l'entreprise, créer un de cohésion pour finalement permettre à l'entreprise de mieux gérer ces deals.
 
 \newpage
 \subsection{Architecture fonctionnelle - Actuelle}
 
-La version actuelle est s'approche de la premiere version comme le montre la figure suivante:
+La version actuelle est proche de la première version comme le montre la figure suivante :
 
 \begin{figure}[!h]
     \centering
@@ -115,7 +113,9 @@ La figure suivante represente l'architecture utilisée pour l'importation de la 
     \caption{modèle de données}
 \end{figure}
 
-Pour l'importation de la donnée on peut voir l'existence de plusieurs fichier Excel l'avantage est que ces derniers pour la plupart sont générer automatiquement de la part des outils interne de l'entreprise, ce qui permet de rapidement les regrouper avec un seul Dataflow effectuer les différents changements (ETL) et les utilisé dans notre application ou bien pour créer des tableaux de bords.
+Pour l'importation de la donnée on peut voir l'existence de plusieurs fichier Excel cela revient au faut qu'on utilise des extrait de la part d'outils interne, ce qui permet de rapidement les regrouper avec un seul Dataflow effectuer les différents changements (ETL) et les utilisé dans notre application ou bien les tableaux de bords.
+
+\newpage
 
 \section{Architecture logiciel : Power Platform }
 

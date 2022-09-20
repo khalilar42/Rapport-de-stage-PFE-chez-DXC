@@ -21,14 +21,14 @@ d’identification et planification du projet.
 \section{Périmètre du projet}
 \subsection{Problématique générale}
 
-Actuellement, il n’existe aucune solution pour la plannification des effectifs. La méthodologie utilisée pour l’instant est basée sur plusieurs fichiers Excel qui sont partagés entre plusieurs entités. Il est pertinent de libérer ce style classique adopté par les commerciaux et les responsables des ressources humaines qui est basé sur le calcul manuelle des couts ainsi que l'utilisation excessive d'Excel pour classifier tous les acteurs matériaux ou humanitaires qui participent dans la construction d’un « Deal ». 
+Actuellement, il n’existe aucune solution pour la gestion des effectifs. La méthodologie utilisée pour l’instant est basée sur plusieurs fichiers Excel qui sont partagés entre plusieurs entités. Il est pertinent de libérer ce style classique adopté par les commerciaux et les responsables des ressources humaines qui est basé sur le calcul manuelle des couts ainsi que l'utilisation excessive d'Excel pour classifier tous les acteurs matériaux ou humanitaires qui participent dans la construction d’un « Deal ». 
 \\
 
-Donc notre problématique majeure est de définir d’une manière claire et précise les besoins et les attentes d’un système d’information permettant d’automatiser les remontées de l’équipe vers différentes entités, ainsi que la saisie des Deals, choix des Squads, l’affectation des ressources. D’une autre part garder la trace de tous les échanges afin de pouvoir établir des statistiques ainsi que des tableau de bord pour prendre la décision du gain du deal.
+Donc notre problématique majeure est de définir d’une manière claire et précise les besoins et les attentes d’un système d’information permettant d’automatiser les remontées de l’équipe vers différentes entités, ainsi que la saisie des Deals, choix des Squads, l’affectation des ressources. D’une autre part garder la trace de tous les échanges afin de pouvoir établir des statistiques ainsi que des tableaux de bord pour prendre la décision du gain du deal.
 
 \subsection{But du projet}
 
-Le but de ce projet est de réaliser une solution Power Platform qui va permettre de digitaliser le processus de plannification de ressource et de se libérer de l’utilisation exagéré des fichiers Excel pour passer vers l’utilisation de base de données plus robuste et efficace. L’application a pour vision de :  
+Le but de ce projet est de réaliser une solution Power Platform qui va permettre de digitaliser le processus de planification des ressources et de se libérer de l’utilisation exagéré des fichiers Excel pour passer vers l’utilisation de base de données plus robuste et efficace. L’application a pour vision de :  
 \\
 
 \begin{itemize}
@@ -41,19 +41,17 @@ Le but de ce projet est de réaliser une solution Power Platform qui va permettr
 Ma mission durant ce stage de fin d’études consiste à améliorer cela, les principaux module que j'ai developpé avec l'équipe Power Platform sont:
 \\
 \begin{itemize}
-  \item Account Process - View submission
   \item Account Process - Add Demand to account - Existing Account
   \item Account Process - Add Demand to account - New Logo
   \item Account Process - Add Demand to account - Roll-Off \ Roll-On
   \item Account Process - Modification of demand - Modification of demand
   \item Account Process - Modification of demand - Placeholder Modification
-  \item Account Process - Interlock Submission from account 
+  \item Account Process - View submission
+  \item Interlock - Interlock Submission from account 
+  \item Interlock - Interlock Submission from Service Line
   \item DCT Position Level Management - Create Demand
   \item DCT Position Level Management - Update Demand
   \item DCT Position Level Management - View Submissions
-  \item DCT Project Level Management - Create New Project
-  \item DCT Project Level Management - Update An Existing Project
-  \item DCT Project Level Management - Close An Existing Project
   \item DCT Demand Team - Demand Validation Check
 \end{itemize}
 
@@ -73,7 +71,10 @@ détaillant leur probabilité de réalisation et la sévérité des impacts sur 
 
 \subsection{Methodologie Scrum}
 
-Nous avons opté pour cette méthode car la mise en œuvre de notre projet nécessite une vision globale de la solution à mettre en place, que ce soit au niveau technique, architectural ou fonctionnel. De plus le projet n’est décrit que par des phases clés lors de son développement, les besoins de client se concrétisent à la phase de réalisation, chose qu’on ne peut jamais fixer à l’avance par la modélisation initiale, ajoutant a cela l’extensibilité du système dans le temps, la demande de nouvelle fonctionnalités ..etc. la méthode agile qui permet une vérification fonctionnelle tout en recueillant les nouveau besoins s’est montré indispensable dans ce cas, en plus c’est la méthode demandée par l’entreprise, j’étais dans l’obligation de respecter les consignes de mon employeur et de travailler avec.
+Nous avons opté pour la méthodologie Scrum car la mise en œuvre de notre projet nécessite une vision globale de la solution à mettre en place, que ce soit au niveau technique, architectural ou fonctionnel. De plus le projet n’est décrit que par des phases clés lors de son développement, les besoins de client se concrétisent à la phase de réalisation, chose qu’on ne peut jamais fixer à l’avance par la modélisation initiale, ajoutant à cela l’extensibilité du système dans le temps, la demande de nouvelle fonctionnalités. 
+\\
+\\
+La méthode agile qui permet une vérification fonctionnelle tout en recueillant les nouveau besoins s’est montré indispensable dans ce cas, en plus c’est la méthode demandée par l’entreprise, j’étais dans l’obligation de respecter les consignes de mon employeur et de travailler avec.
 
 \begin{figure}[!h]
     \centering
@@ -96,10 +97,10 @@ Nous avons opté pour cette méthode car la mise en œuvre de notre projet néce
         de développement.
     \\    
     \item \textbf{Début de Sprint}: 
-        Le Sprint peut alors commencer pour une itération de 2, 3 ou 4 semaines.
+        Le Sprint peut alors commencer pour une itération de deux, trois ou quatre semaines, dans notre cas deux semaine.
     \\    
     \item \textbf{Mêlée quotidienne}: 
-        L’équipe se réunit quotidiennement pour réaliser la Mêlée quotidienne
+        L’équipe se réunit chaque jour pour réaliser la Mêlée quotidienne, une réunion qui va permettre de synchroniser et d'ajuster ses actions pour la journée et de répartir les tâches à traiter mais aussi de discuter de potentielle blocage.
     \\    
     \item \textbf{Fin de sprint}: 
         À l’issue du Sprint, nous possédons un produit potentiellement livrable qui fait l’objet d’une démonstration lors de la revue du Sprint.
@@ -114,25 +115,26 @@ La partie suivante présente les différentes phases par lesquelles est passé l
 \\
 
 \begin{itemize}
-  \item \textbf{Phase initialisation et cadrage: }
+  \item \textbf{Phase initialisation et cadrage :}
         Dont les taches sont la prise de connaissance du contexte et métier de
         l’entreprise cliente et l’environnement du projet.
     \\
-    \item \textbf{Etude technique et fonctionnelle}: 
+    \item \textbf{Etude technique et fonctionnelle :} 
         Qui a pour but d’installer l’environnement du travail, tenir des réunions avec les responsables, rédiger les spécifications fonctionnelles et fixer les choix fonctionnels à travers un document de spécifications des besoins découlant de l’analyse et des besoins du client.
     \\    
-    \item \textbf{Réalisation de l’application}: 
+    \item \textbf{Réalisation de l’application :} 
         Cette étape constitue l'étape active de la démarche de projet en ce sens où
         elle concrétise la réalisation du projet, c'est pendant cette étape que se réalisent toutes les prévisions définies précédemment et que s'engagent les ressources dimensionnées durant l'étape de conception.
     \\    
-    \item \textbf{La mise en production de cette application}: 
+    \item \textbf{La mise en production de cette application :} 
         Déploiement de l’application après la réalisation des tests dans l'environement de production où le client peut utiliser l’application.
     \\    
 
 \end{itemize}
 
+\newpage
 \subsection{Equipe du projet}
-Le projet sera réalisé par un groupe de deux stagiaires et trois employés qui sont les membres de l'equipe Power Platform comme montré dans la figure suivante:
+Le projet sera réalisé par un groupe de deux stagiaires et trois employés qui sont les membres de l'équipe Power Platform comme montré dans la figure suivante :
 \\
 
 \begin{figure}[!h]
@@ -151,15 +153,16 @@ La méthode Scrum définit trois rôles qui sont :
     \item \textbf{Le Scrum Master (le directeur de produit) :}
         c'est la personne qui doit assurer le bon déroulement des différents sprints du release, et qui doit impérativement maitriser Scrum.
     \\    
-    \item \textbf{La ScrumTeam (l’équipe de Scrum) :}
+    \item \textbf{La Scrum Team (l’équipe de Scrum) :}
         constitué des personnes qui seront
         chargées d’implémenter les différents besoins du client. Bien
         évidemment, cette équipe sera constituée des développeurs, des
-        infographistes,etc.
+        infographistes et autres.
     \\    
 
 \end{itemize}
 
+\newpage
 \subsection{Planification du projet}
 Le projet était nouveau pour ma part, Il utilise Power Platform une technologie non abordée le long de mon parcours scolaire. Du coup, une planification rigoureuse s’est imposée pour prévoir le déroulement du projet.
 \\[0.5cm]
@@ -174,28 +177,25 @@ suivant :
     \caption{Diagramme de Gantt}
 \end{figure}
 
-
-
-
 \\
 Le projet est partagé en trois grandes étapes : 
 \\
 \begin{itemize}
-  \item La première est \textbf{une phase de documentation} dont les objectifs était de bien assimiler les différents composant de Microsoft Power Platform.
+  \item La première est \textbf{une phase de documentation et de formation} dont les objectifs était de bien assimiler les différents composant de Microsoft Power Platform.
   \\
-  \item \textbf{La phase de l'élaboration du cahier de charge}, vu que le projet avait beaucoup de collaborateur cette dernière a pris du temps pour les mettre en accord sur les différentes fonctionnalités de l'application.
+  \item \textbf{La phase d'élaboration du cahier de charge}, vu que le projet avait beaucoup de collaborateur cette dernière a pris du temps pour les mettre en accord sur les différentes fonctionnalités de l'application.
   \\
-  \item \textbf{La phase de conception de l'application} qui a permis de construire un systeme qui relie plusieurs entité et outils mais surtout elimine les fichiers Excel du processus.
+  \item \textbf{La phase de conception de l'application} qui a permis de construire un systeme qui relie plusieurs entité.
   \\
-  \item \textbf{La phase de réalisation de l'application} où j'ai commencé par d'abord élaborer le front-end pour ensuite passer au backend en utilisant Power Apps et Power Automate.
+  \item \textbf{La phase de réalisation de l'application} où j'ai commencé par d'abord élaborer le front-end pour ensuite passer au back-end en utilisant Power Apps et Power Automate.
   \\
-  \item \textbf{La phase de validation de l'application} par les différents membres de l'équipe ainsi que ça documentation.
+  \item \textbf{La phase de validation de l'application} par les différents membres de l'équipe mais aussi le product owner
   \\
 \end{itemize}
 \\
 
 \subsection{Gestion et suivi du projet}
-Pour ce qui est de la gestion et suivi des nouvelle fonctionalité ainsi qu'erreur dans le projet. \textbf{Azure Boards} était l'outil utilisé pour permettre ce suivi.
+Pour ce qui est de la gestion et suivi des nouvelles fonctionnalités ainsi qu'erreur dans le projet, nous avons utilisé \textbf{Azure Boards}: 
 
 Cette image represente quelque elements du backlog :
 
@@ -205,15 +205,14 @@ Cette image represente quelque elements du backlog :
     \caption{Azure Boards : Backlog}
 \end{figure}
 
-Pour hiérarchiser notre projet nous avons utilisé 4 catégories dans Azure Boards :
+Pour hiérarchiser notre projet nous avons utilisé quatres éléments de catégories dans Azure Boards :
 \\
 
 \begin{itemize}
-
   \item \textbf{Epic:} Représentant un module ou un groupe de fonctionnalité.
   \item \textbf{Feature :} Représentant les différentes fonctionnalités voulu pour le module.
-  \item \textbf{Product backlog Item :} Qui représente les screens qui vont être créer pour ce module.
-  \item \textbf{Tasks:} Ensuite viens les taches qui vont être effectué pour la création de ces derniers.
+  \item \textbf{Product backlog Item :} Qui représente les interfaces qui vont être créer pour ce module.
+  \item \textbf{Tasks:} Ensuite viens les taches qui vont être effectué pour la création de ces interfaces.
 \end{itemize}
 
 \vspace{0.5cm}
@@ -227,8 +226,13 @@ A part cela nous avons aussi utilisé deux autres catégories :
 \end{itemize}
 
 \vspace{\baselineskip}
-Après avoir définit les différents items dans le backlog vient l'étape du verrouillage des différents items qui seront inclus dans le sprint de développement, le Product Owner ainsi que le Scrum Master discute des priorités des différentes taches et les ajoute en se basant sur cette dernière au sprint de développement.
-Ensuite vient l'étape d'estimation des efforts nécessaire pour chaque tache pour ne pas dépacer la capacité de l'équipe de développement et ne pas pouvoir terminer toutes les taches du sprint, L'estimation se fait avec des sessions de planning poker.Donc après le sprint planning la phase de réalisation et d’implémentation démarre en assignant chaque tâche à une personne.
+Après avoir définit les différents items dans le backlog vient l'étape du verrouillage des différents items qui seront inclus dans le sprint de développement, le Product Owner ainsi que le Scrum Master discute des priorités des différentes tâches et les ajoute en se basant sur cette dernière au sprint de développement.
+\\
+\\
+Ensuite vient l'étape d'estimation des efforts nécessaire pour chaque tache pour ne pas dépasser la capacité de l'équipe de développement et ne pas pouvoir terminer toutes les taches du sprint, L'estimation se fait avec des sessions de planning poker.
+\\
+\\
+Donc après le sprint planning la phase de réalisation et d’implémentation démarre en assignant chaque tâche à une personne.
 
 
 \begin{figure}[H]
@@ -237,7 +241,8 @@ Ensuite vient l'étape d'estimation des efforts nécessaire pour chaque tache po
     \caption{Azure Boards : Sprint Task Board}
 \end{figure}
 
-Tous les matins à 9H on effectue une réunion qui regroupe l'équipe de développement ainsi que le Product Owner et le Scrum Master sur Microsoft Teams dans laquelle on discute de ce qu’on a fait hier et ce qu’on va faire aujourd’hui et les points de blocage, ces derniers sont listés dans une carte Trello comme le montre la figure suivante :
+\newpage
+Tous les matins à 9H on effectue une réunion qui regroupe l'équipe de développement ainsi que le Product Owner sur Microsoft Teams dans laquelle on discute de ce qu’on a fait hier et ce qu’on va faire aujourd’hui et les points de blocage, ces derniers sont listés dans une carte Trello comme le montre la figure suivante :
 
 \begin{figure}[H]
     \centering
@@ -248,4 +253,4 @@ Tous les matins à 9H on effectue une réunion qui regroupe l'équipe de dévelo
 \section{Conclusion}
 
 Dans ce chapitre j’ai présenté l’étude générale du projet et le choix de la méthodologie ainsi
-que le déroulement du projet, son but, les differents livrable, la planification du projet, et finalement la gestion et suivi de ce dernier. Le chapitre suivant se concentrera sur l’étude des besoins du projet.
+que le déroulement du projet, son but, les différents livrable, la planification du projet, et finalement la gestion et suivi de ce dernier. Le chapitre suivant se concentrera sur l’étude des besoins du projet.

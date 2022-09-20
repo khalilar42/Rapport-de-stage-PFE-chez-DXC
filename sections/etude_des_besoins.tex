@@ -24,7 +24,7 @@ fonctionnels, après avoir décrit les processus métiers, et les règles de ges
 L’objectif principal du projet est la facilitation de saisie des données ainsi que l’aide à la prise de décision, de passer d’un modèle de travail qui utilisait plusieurs fichier Excel partager avec plusieurs Equipe pour prendre la décision et s’organiser vers un modèle qui est centré sur une seul application Power Apps qui met en relation les différentes entités du system. 
 \\
 
-Dans un premier temps, il s’agit de définir de manière claire et précise les besoins et les attentes d’un système d’information permettant d’automatiser les remontées de l’équipe vers différentes entités, ainsi que la saisie des Deals, choix des Squads, l’affectation des ressources et l’affichage des statistiques dans un tableau de bord avec différents filtres. 
+Dans un premier temps, il s’agit de définir de manière claire et précise les besoins et les attentes d’un système d’information permettant d’automatiser les remontées de l’équipe vers différentes entités, ainsi que la saisie des Deals, choix des équipes, l’affectation des ressources et l’affichage des statistiques dans un tableau de bord avec différents filtres. 
 \\
 
 Fournir une visibilité sur les prévisions financières au niveau du compte et du portefeuille, y compris les changements de revenus mensuels et trimestriels. Ce système devra être capable de gérer les relations clients, la saisie des différents deals pour assurer un suivi par les Services Lines, un Reporting et un suivi des indicateurs.
@@ -41,22 +41,19 @@ Les fonctionnalités attendues de l'application sont les suivantes :
 \\
 
 \begin{itemize}
-    \item \textbf{Account Process - Ajout de la masse salariale}
-    \item \textbf{Account Process - Future client}
-    \item \textbf{Account Process - Roll-Off / Roll-On}
-    \item \textbf{Account Process - Modification de la demande}
-    \item \textbf{Account Process - Placeholder Modification de la demande}
-    \item \textbf{Account Process - Consultation des soumissions}
-    \item \textbf{Interlock submission with Service Line}
-    \item \textbf{Interlock submission with Account}
-    \item \textbf{DCT Position Level Management - Creation de demande}
-    \item \textbf{DCT Position Level Management - Mise a jour de la demande}
-    \item \textbf{DCT Position Level Management - Consultation des soumissions}
-    \item \textbf{DCT Position Level Management - Creation des projets}
-    \item \textbf{DCT Position Level Management - Mise a jour d'un projet existant}
-    \item \textbf{DCT Position Level Management - Fermeture d'un projet existant}
+    \item \textbf{Account Process - Add Demand to account - Existing Account}
+    \item \textbf{Account Process - Add Demand to account - New Logo}
+    \item \textbf{Account Process - Add Demand to account - Roll-Off Roll-On}
+    \item \textbf{Account Process - Modification of demand - Modification of demand}
+    \item \textbf{Account Process - Modification of demand - Placeholder Modification}
+    \item \textbf{Account Process - View submission}
+    \item \textbf{Interlock - Interlock Submission from account}
+    \item \textbf{Interlock - Interlock Submission from Service Line}
+    \item \textbf{DCT Position Level Management - Create Demand}
+    \item \textbf{DCT Position Level Management - Update Demand}
+    \item \textbf{DCT Position Level Management - View Submissions}
+    \item \textbf{DCT Demand Team - Demand Validation Check}
 \end{itemize}
-
 
 \section{Contraintes du projet}
 
@@ -77,8 +74,7 @@ Aujourd’hui, la circulation de l’information dans une entreprise est devenue
 \\\\
 Le présent système n’arrive pas à satisfaire les attentes de ses utilisateurs à cause du traitement et du fonctionnement manuelle de ce dernier, il existe plusieurs sources de données qui ne sont pas corrélées ou facilement directement liés dans une vue unique automatisée qui empêche une gestion efficace des coûts et des revenus.
 \\\\
-Cette incapacité à aligner étroitement les mouvements de coûts sur les mouvements de revenus a entraîné des complications et des erreurs dans le suivi et la déclaration des
-action decroissance,action dans la région EMEA.
+Cette incapacité à aligner étroitement les mouvements de coûts sur les mouvements de revenus a entraîné des complications et des erreurs dans le suivi et la déclaration des actions de croissance dans la région EMEA.
 \\
 
 Pour cette raison, Value Attainement tool a été déclaré comme besoin interne par le service Line APPS, permettant les bonnes interprétations des informations, la facilitation de saisie des données ainsi que l’aide à la prise de décision.
@@ -105,8 +101,6 @@ Pour répondre aux besoins réels et urgents en termes de contraintes fonctionne
     
     \item \textbf{Consultation des soumission de la masse salariale:} Consulter les différentes soumissions sur la transformation de la masse salariale dans une seul page et aussi la sélection puis la modification possible de chaque soumission.
     
-    \item \textbf{Gestion de projet DCT:} Ajout d'un nouveau projet DCT, modification de ce dernier et aussi la fermeture du projet.
-    
     \item \textbf{Gestion de demande DCT:} Ajout d'un nouvelle demande, modification d'une demande.
     
     \item \textbf{Consultation des soumissions au niveau du DCT:} Consulter les différentes soumissions du DCT.
@@ -118,7 +112,7 @@ Pour répondre aux besoins réels et urgents en termes de contraintes fonctionne
 \subsection{Besoins fonctionnels : Fonctionnalités}
 
 \textbf{\color{red}Bloc fonctionnel : Gestion de la masse salariale}
-    
+\\[0.3cm] 
 Ce bloc fonctionnel est composé de trois écran ou bien page et il permet la gestion de la masse salariale:
 \\
 \begin{itemize}
@@ -128,30 +122,20 @@ Ce bloc fonctionnel est composé de trois écran ou bien page et il permet la ge
 \end{itemize}
 
 \vspace{0.5cm}
-\textbf{\color{red}Bloc fonctionnel : Consultation les soumission de la masse salariale:}
-    
+\textbf{\color{red}Bloc fonctionnel : Consultation les soumission de la masse salariale}
+\\[0.3cm]    
 Ce bloc fonctionnel est composé d'un seul ecrant qui relie les differentes soumissions de la masse salariale:
 \\
 \begin{itemize}
-    \item La consulation des soumission de la masse salariale
-    \item La modification d'une soumission aprés sélection
-    \item La modification d'un groupe de soumission
+    \item La consulation des soumission de la masse salariale.
+    \item La modification d'une soumission aprés sélection.
+    \item La modification d'un groupe de soumission.
+    \item La creation d'une demande DCT a partir d'une entrée VA.
 \end{itemize}
 
 \newpage
-\textbf{\color{red}Bloc fonctionnel : Gestion de projet DCT}
-    
-Ce bloc fonctionnel est composé de trois ecran et il permet la gestion des projet DCT: 
-\\
-\begin{itemize}
-    \item L'ajout d'un nouveau projet DCT.
-    \item La modification d'un projet DCT.
-    \item La fermeture d'un projet DCT.
-\end{itemize}
-
-\vspace{0.5cm}
 \textbf{\color{red}Bloc fonctionnel : Gestion de demande DCT}
-    
+\\[0.3cm]    
 Ce bloc fonctionnel est composé de trois ecran et il permet la gestion des demandes: 
 \\
 \begin{itemize}
@@ -161,10 +145,13 @@ Ce bloc fonctionnel est composé de trois ecran et il permet la gestion des dema
 
 \vspace{0.5cm}
 \textbf{\color{red}Bloc fonctionnel : Consultation des soumissions au niveau du DCT}
-    
-Ce bloc fonctionnel est composé d'un seul ecran qui relie les differentes soumissions des projets DCT.
+\\[0.3cm]    
+Ce bloc fonctionnel est composé d'un seul ecran qui relie les differentes soumissions des positions.
 \begin{itemize}
-    \item La consultation des differentes soumission pour projet DCT.
+    \item La consultation des différentes soumission DCT.
+    \item La possibilité d'annuler une soumission DCT.
+    \item La modification d'une soumission.
+    \item La possibilité d'attacher un fichier.
 \end{itemize}
 
 \vspace{0.5cm}
@@ -189,7 +176,6 @@ système.
     \item \textbf{Convivialité:} Le système doit être compréhensible, documenté, et son
 utilisation doit être facile.
 \end{itemize}
-\newpage
 
 \subsection{Acteurs}
 Il s’agit de quatre acteurs principaux agissant dans le système :
