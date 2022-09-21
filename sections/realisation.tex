@@ -53,7 +53,7 @@ Commençons par donner une explication générale à chacune des sections prése
             \item[\textbullet] \textbf{Modification of demand:} Cette option permet a un administrateur de compte de modifier les information d'une position ou bien employé: 
             
             \begin{itemize}
-                \item[\ding{51}] \textbf{Modification of demand:} qui est composé de deux lever a savoir Run-Off qui represente un employé dont le contrat arrive à son terme ou bien extension qui va permettre a l'administrateur du compte d'étendre sont contrat
+                \item[\ding{51}] \textbf{Modification of demand:} qui est composé de deux lever a savoir Run-Off qui represente un employé dont le contrat arrive à son terme ou bien extension qui va permettre a l'administrateur du compte d'étendre sont contrat.
                 \item[\ding{51}] \textbf{Placeholder Modification:} of demand qui est similaire au placeholder add demand expliqué precedement, cette dernière permet de préparer une entrée de modification pour un futur besoin, elle aussi peut être convertit en une entrée VA dans le futur.
             \end{itemize}
             
@@ -63,7 +63,7 @@ Commençons par donner une explication générale à chacune des sections prése
             
             \begin{itemize}
                 \item[\ding{51}] \textbf{Work Migration/LPI:} est utilisé lorsequ'on veut migrer un employé vers un autre centre de delivery DXC.
-                \item[\ding{51}] \textbf{Productivity:} 
+                \item[\ding{51}] \textbf{Productivity:} Est utilisé lors d'un gain au niveau du coup de l'employé, par exemple en cas ou le remplacement d'une position nous coute moins chère.
             \end{itemize}
             
             \vspace{0.5cm}
@@ -174,20 +174,127 @@ Commençons par donner une explication générale à chacune des sections prése
 
 La page d'accueil contient aussi un aperçu rapide du nombre de compte affecté pour l'utilisateur, le nombre d'entré saisie par l'utilisateur.
 \\[0.3cm]
-On peut aussi être re-directioner vers une application d'aide ou bien envoyer un email en cas de problème a la mailbox de support. 
+On peut aussi être renvoyer vers une autre application qui nous permet d'enregistrer les différentes suggestions des utilisateurs ou bien envoyer un email en cas de problème à la mailbox de support.
+
+%Add demand to account
+\section{Compte - Ajout de masse salariale}
+
+
+% ========================= Existing account =================================
+\subsection{Compte existant}
+
+\subsubsection{Présentation de l'interface :}
+
+L'interface suivante permet a un responsable de compte de faire une demande d'ajout, c'est a dire ajouter une position pour une opportunité ou bien projet.
+
+
+\subsubsection{Regle de gestion:}
+
+Le tableau suivant represente les different regle de gestion que l'interface doit respecter :
+
+\vspace{0.2cm}
+
+\tikzset{ 
+    table/.style={
+        matrix of nodes,
+        row sep=-\pgflinewidth,
+        column sep=-\pgflinewidth,
+        nodes={
+            rectangle,
+            draw=black
+        },
+        minimum height=1.5em,
+        text depth=0.5ex,
+        text height=2ex,
+        nodes in empty cells,
+%%
+        every even row/.style={
+            nodes={fill=gray!70}
+        },
+        column 1/.style={
+            nodes={text width=10em,align=center}
+        },
+        column 2/.style={
+            nodes={text width=24em}
+        },
+        column 3/.style={
+            nodes={text width=5em,align=center}
+        },
+        row 1/.style={
+            nodes={
+                font=\bfseries,
+                align=center,
+                fill=black,
+                text=white,
+            }
+        },
+        row 2/.style={
+            nodes={
+                fill=black,
+                text=white,
+                text depth=4ex,
+            }
+        },
+        row 3/.style={
+            nodes={
+                fill=white,
+                text=black,
+                text depth=4ex,
+            }
+        },
+        row 4/.style={
+            nodes={
+                fill=black,
+                text=white,
+                text depth=4ex,
+            }
+        },
+        row 5/.style={
+            nodes={
+                fill=white,
+                text=black,
+                text depth=4ex,
+            }
+        },
+        row 6/.style={
+            nodes={
+                fill=black,
+                text=white,,
+                text depth=11ex,
+            }
+        },
+        row 7/.style={
+            nodes={
+                fill=white,
+                text=black,
+                text depth=7ex,
+            }
+        }
+    }
+}
+
+\begin{tikzpicture}
+
+\matrix (first) [table,text width=6em]
+{
+ Regle de gestion  & Description & Type \\
+ RG01 & Toutes les informations de l’étape 2 doivent être remplis & Métier \\
+ RG02 & Si une information de l'étape 2 ou bien 1 est vide le bouton de soumission doit être désactiver. & Métier \\
+ RG03 & La valeur du FTE doit etre entre 0 et 1 & Métier \\
+ RG04  & Le champ monthly cost n'accepte que des chiffres & Métier \\
+ RG05  & Si l'utilsateur selectionne "Yes" dans le champ "in account forcast", Il doit imperativement remplire les deux champ suivant a savoir le l'année fiscale et le mois. & Métier \\
+ RG06  & Une fois l'entrée soumis tout les champs doivent etre réinitialiser puis envoyer l'utilisateur a l'interface "view submission" & IHM\\
+};
+
+
+\end{tikzpicture}
+
 
 \newpage
-\section{Compte - Ajout de masse salariale}
-Pour l'ajout de masse salariale au niveau du compte 4 option se presente :
 
-\begin{itemize}
-    \item \textbf{Compte existant:} Le compte auxquelle on ajoute une demande existe déja en tant que client
-    \item \textbf{New logo:}  Le compte auxquelle on souhaite ajouté une demande n'est pas encore un client
-    \item \textbf{Roll-Off\Roll-on:} L'employé qu'on souhaite ajouter se trouve déja dans un autre projet et va changer ce dernier
-    \item \textbf{PlaceHolder - add demand:} L'utilisateur souhaite créer une entré pour un future besoin
-\end{itemize}
+\subsubsection{Fonctionnement de l'interface :}
 
-\subsection{Compte existant}
+La figure ci-dessous représente l'interface qui permet de faire une demande de croissance par un administrateur de compte :
 
 \begin{figure}[!h]
     \centering
@@ -195,22 +302,61 @@ Pour l'ajout de masse salariale au niveau du compte 4 option se presente :
     \caption{Ajout de demande - Compte existant}
 \end{figure}
 
-L'utilisateur doit sélectionner le compte auxquelles il souhaite ajouter une demande, ensuite il doit saisir l'OPX-ID qui représente un identificateur pour une opportunité, ensuite toutes les informations de la première étape sont automatiquement remplies, puis l'utilisateur doit saisir les différentes informations de la deuxième étape en respectant les différentes contraintes. 
-\\[0.3cm]
-Deux options s’offrent à l'utilisateur pour saisir l’entrer il peut soit la soumettre directement ou bien l'enregistrer en tant que brouillon pour s'assurer des informations et la soumettre après.
+La procédure pour saisir une entrée de type croissance est le suivant :
+
+\begin{enumerate}
+    
+    \item L'utilisateur commence par sélectionner le sub-lever, qui représente la catégorie de la demande d'ajout pour un projet ou bien une croissance stratégique ou autres ensuite il doit cliquer sur le bouton ok.
+    \vspace{0.1cm}
+    \item Ensuite l'utilisateur doit sélectionner le compte et le contrat qu'il souhaite.
+    \vspace{0.1cm}
+    \item Puis apparait diffèrent champ qu'il doit remplir, pour l'étape 1 il suffit de sélectionner un OPX-ID qui représente un identificateur d'une opportunité ensuite toutes les informations sont automatiquement remplis.
+    \vspace{0.1cm}
+    \item La deuxième étape est saisie par l'utilisateur il doit remplir toutes les informations de la demande
+    \vspace{0.1cm}
+    \item Finalement l'utilisateur a deux choix soit soumettre directement ou bien la soumettre en tant que brouillon s'il n'est pas sur ou souhaite changer les informations de l'entrée dans le futur
+
+\end{enumerate}
 
 \newpage
+
+% =========================== New logo =================================
+
 \subsection{New Logo}
 
-\begin{figure}[!h]
+\subsubsection{Présentation de l'interface :}
+
+L'interface suivante permet à un responsable de compte de faire une demande d'ajout de la même manière que la précédente la seule différence est l'utilisation du contrat Salesforce a la place du nom du compte.
+
+\subsubsection{Regle de gestion:}
+
+L'interface doit respecter le même tableau de règle de gestion vu précédemment.
+
+\subsubsection{Fonctionnement de l'interface :}
+
+\begin{figure}[H]
     \centering
     \includegraphics[scale=0.4,keepaspectratio]{Rapport de stage PFE chez DXC/figures/New_Logo.png}
     \caption{Ajout de demande - New Logo}
 \end{figure}
 
-Ce formulaire fonctionne de la meme facon que le precedent la seul difference est dans le choix du compte, dans ce dernier le choix du compte est fait a travers le contrat SalesForce car le compte n'est pas encore un client de DXC d'ou le nom de New Logo.
+Ce formulaire fonctionne de la même façon que le précèdent la seule différence est dans le choix du compte, dans ce dernier le choix du compte est fait à travers le contrat Salesforce car le compte n'est pas encore dans la base de données financière de DXC d'où la nomination "New Logo".
+
+\newpage
+
+% =========================== Roll-Off / Roll-On =================================
 
 \subsection{Roll-Off / Roll-On}
+
+\subsubsection{Présentation de l'interface :}
+
+L’interface suivante permet à un responsable de compte de faire une demande d’ajout, la différence est que dans ce cas un employé va changer de projet mais va rester avec le même compte.
+
+\subsubsection{Regle de gestion:}
+
+L’interface doit respecter le même tableau de règle de gestion vu précédemment.
+
+\subsubsection{Fonctionnement de l'interface :}
 
 \begin{figure}[H]
     \centering
@@ -218,11 +364,129 @@ Ce formulaire fonctionne de la meme facon que le precedent la seul difference es
     \caption{Ajout de demande - Roll-Off / Roll-On}
 \end{figure}
 
-Pour le "Roll-Off/Roll-On", Un employé change de projet en restant avec le meme client.
-\\
-Dans la 1er etape l'utilisateur doit saisire l'OPX-ID mais aussi l'identificateur de l'employé qui vas faire la transition, ensuite il remplis les information necessaire dans la deuxieme étape tout en resepectant les differrentes contrainte, ensuite de la meme maniere il peut soit soumettre ou sauvegarder l'entré comme brouillon
+La procédure pour saisir une entrée de type Roll-Off/Roll-On est le suivant :
+
+\begin{enumerate}
+    
+    \item L'utilisateur doit sélectionner le compte et le contrat qu'il souhaite.
+    \vspace{0.1cm}
+    \item L'étape 1 est divisé en deux, La première partie est utilisé pour collecter les informations en relation avec la nouvelle opportunité, la deuxième partie est utilisée pour assembler les informations en relation avec l'employé.
+    \vspace{0.1cm}
+    \item La deuxième étape est saisie par l'utilisateur il doit remplir toutes les informations pour compléter l'entrée.
+    \vspace{0.1cm}
+    \item Finalement l'utilisateur a deux choix soit soumettre directement ou bien la soumettre en tant que brouillon s'il n'est pas sur ou souhaite changer les informations de l'entrée dans le futur
+
+\end{enumerate}
+
+% =========================== PlaceHolder - Add Demand =================================
 
 \subsection{PlaceHolder - Add Demand}
+
+\subsubsection{Présentation de l'interface :}
+
+L’interface suivante permet à un responsable de compte de créer une sorte de demande temporaire, c'est à dire ici l'utilisateur peut créer une demande de croissance avec un FTE supérieur à 1, ensuite la convertir en plusieurs entrée VA.
+
+\subsubsection{Regle de gestion:}
+
+Le tableau suivant represente les different regle de gestion que l'interface doit respecter :
+
+\vspace{0.2cm}
+
+\tikzset{ 
+    table/.style={
+        matrix of nodes,
+        row sep=-\pgflinewidth,
+        column sep=-\pgflinewidth,
+        nodes={
+            rectangle,
+            draw=black
+        },
+        minimum height=1.5em,
+        text depth=0.5ex,
+        text height=2ex,
+        nodes in empty cells,
+%%
+        every even row/.style={
+            nodes={fill=gray!70}
+        },
+        column 1/.style={
+            nodes={text width=10em,align=center}
+        },
+        column 2/.style={
+            nodes={text width=24em}
+        },
+        column 3/.style={
+            nodes={text width=5em,align=center}
+        },
+        row 1/.style={
+            nodes={
+                font=\bfseries,
+                align=center,
+                fill=black,
+                text=white,
+            }
+        },
+        row 2/.style={
+            nodes={
+                fill=black,
+                text=white,
+                text depth=4ex,
+            }
+        },
+        row 3/.style={
+            nodes={
+                fill=white,
+                text=black,
+                text depth=4ex,
+            }
+        },
+        row 4/.style={
+            nodes={
+                fill=black,
+                text=white,
+                text depth=4ex,
+            }
+        },
+        row 5/.style={
+            nodes={
+                fill=white,
+                text=black,
+                text depth=4ex,
+            }
+        },
+        row 6/.style={
+            nodes={
+                fill=black,
+                text=white,,
+                text depth=11ex,
+            }
+        },
+        row 7/.style={
+            nodes={
+                fill=white,
+                text=black,
+                text depth=7ex,
+            }
+        }
+    }
+}
+
+\begin{tikzpicture}
+
+\matrix (first) [table,text width=6em]
+{
+ Regle de gestion  & Description & Type \\
+ RG01 & Toutes les informations de l’étape 2 doivent être remplis & Métier \\
+ RG02 & Si une information de l'étape 2 ou bien 1 est vide le bouton de soumission doit être désactiver. & Métier \\
+ RG03 & La valeur du FTE peut etre superieur a 1 & Métier \\
+ RG04  & Le champ monthly cost n'accepte que des chiffres & Métier \\
+ RG06  & Une fois l'entrée soumis tout les champs doivent etre réinitialiser puis envoyer l'utilisateur a l'interface "view submission" & IHM\\
+};
+
+
+\end{tikzpicture}
+
+\subsubsection{Fonctionnement de l'interface :}
 
 \begin{figure}[H]
     \centering
@@ -230,7 +494,21 @@ Dans la 1er etape l'utilisateur doit saisire l'OPX-ID mais aussi l'identificateu
     \caption{Ajout de demande - Placeholder Add Demand}
 \end{figure}
 
-Pour les placeholders se sont des submission pour un future besoin, aprés avoir créer un placeholder ce dernier peut etre convertis ensuite en une entré VA dans la vue de submission, La soumission de cette entré se fait de la meme maniére que pour l'ajout de demande. 
+La procédure pour saisir une entrée de type "Placeholder - Add demand" est le suivant :
+
+\begin{enumerate}
+    
+    \item L'utilisateur commence par sélectionner le sub-lever, qui représente la catégorie de la demande d'ajout pour un projet ou bien une croissance stratégique ou autres ensuite il doit cliquer sur le bouton ok.
+    \vspace{0.1cm}
+    \item Ensuite l'utilisateur doit sélectionner le compte et le contrat qu'il souhaite.
+    \vspace{0.1cm}
+    \item Puis apparait diffèrent champ qu'il doit remplir, pour l'étape 1 il suffit de sélectionner un OPX-ID qui représente un identificateur d'une opportunité ensuite toutes les informations sont automatiquement remplis.
+    \vspace{0.1cm}
+    \item La deuxième étape est saisie par l'utilisateur il doit remplir toutes les informations de la demande
+    \vspace{0.1cm}
+    \item Finalement l'utilisateur a deux choix soit soumettre directement ou bien la soumettre en tant que brouillon s'il n'est pas sur ou souhaite changer les informations de l'entrée dans le futur
+
+\end{enumerate}
 
 
 \section{Compte - Modification de la masse salariale}
