@@ -27,10 +27,154 @@ les interfaces de l’application, puis nous décrirons les différentes fonctio
 \end{figure}
 
 La page d'accueil regroupe les différentes procédures possibles que propose l'application dans un menu verticale à savoir les procédures en relation avec les comptes, le service line, l'interlock de ces deux dernier mais aussi la gestion des demandes.
+\\[0.1cm]
+
+Commençons par donner une explication générale à chacune des sections présente dans le menu de la page d’accueil :
+\\
+
+\begin{itemize}
+    %% ======================== Account Processes ===============================
+    \item[\ding{118}] \textbf{Account Processes:}
+    
+        \vspace{0.5cm}
+        %% ====================== Add demand to account ==============================
+        \begin{itemize}
+            \item[\textbullet] \textbf{Add demand to account:} Cette option permet à un administrateur de compte de faire une demande d'ajout de masse salariale à son compte, les demande d'ajout sont divisé en quatre parties :
+            
+            \begin{itemize}
+                \item[\ding{51}] \textbf{Existing Account:} est utiliser pour ajouter une demande pour un client existant.
+                \item[\ding{51}] \textbf{New Logo:} est utiliser pour ajouter une demande pour un futur client.
+                \item[\ding{51}] \textbf{Roll-Off/Roll-On:} est utiliser lorsqu’un employé change de projet mais reste avec le même  compte. 
+                \item[\ding{51}] \textbf{Placeholder - Add demand:} joue le rôle d'une entrée temporaire pour un futur besoin, cette dernière peut être convertit en une entrée VA dans le futur.
+            \end{itemize} 
+            
+            %% ====================== Modification of demand ==============================
+            \newpage
+            \item[\textbullet] \textbf{Modification of demand:} Cette option permet a un administrateur de compte de modifier les information d'une position ou bien employé: 
+            
+            \begin{itemize}
+                \item[\ding{51}] \textbf{Modification of demand:} qui est composé de deux lever a savoir Run-Off qui represente un employé dont le contrat arrive à son terme ou bien extension qui va permettre a l'administrateur du compte d'étendre sont contrat
+                \item[\ding{51}] \textbf{Placeholder Modification:} of demand qui est similaire au placeholder add demand expliqué precedement, cette dernière permet de préparer une entrée de modification pour un futur besoin, elle aussi peut être convertit en une entrée VA dans le futur.
+            \end{itemize}
+            
+            \vspace{0.5cm}
+            %% ====================== Optimize demand ==============================
+            \item[\textbullet] \textbf{Optimize demand:} Cette option permet à un administrateur de compte comme son nom l'indique d'optimiser sa demande en effectuant une opération de work migration ou bien Productivity :
+            
+            \begin{itemize}
+                \item[\ding{51}] \textbf{Work Migration/LPI:} est utilisé lorsequ'on veut migrer un employé vers un autre centre de delivery DXC.
+                \item[\ding{51}] \textbf{Productivity:} 
+            \end{itemize}
+            
+            \vspace{0.5cm}
+            %% ====================== View submissions ==============================
+            \item[\textbullet] \textbf{View submission :} Cette option permet à un administrateur de compte de voir ces entrées, de les modifier, d'annuler une entré, de créer à partir d'une entrée VA une entrée DCT mais aussi de dupliquer son entrée.
+            
+        \end{itemize}
+        
+    \vspace{0.5cm}
+    
+    %% ======================== Service Line Processes ===============================
+    
+    \item[\ding{118}] \textbf{Service Line Processes} 
+        
+        \vspace{0.5cm}
+        
+        \begin{itemize}
+        
+            %% ======================== SL Employees ===============================
+            \item[\textbullet] \textbf{Employees:} Cette option permet au responsable du service line d'effectuer différente demande sur les employés à savoir : 
+            \begin{itemize}
+                \item[\ding{51}] \textbf{Modification of demand:} De la même manière qu'un administrateur de compte un responsable de service line peut effectuer une opération de run-off ou bien extension sur l'un des employés.
+                \item[\ding{51}] \textbf{Work migration/LPI:} Il peut aussi effectuer une action de migration sur l'un des employés.
+                \item[\ding{51}] \textbf{Productivity} Il peut également réaliser une modification de type productivity sur l'un des employés.
+                \item[\ding{51}] \textbf{View submission :} Il dispose aussi d'une interface dans laquelle il peut parcourir ces différentes entrées, les modifier ou bien dupliquer.
+            \end{itemize} 
+            
+            \vspace{0.5cm}
+            
+            %% ======================== Subcontractors ===============================
+            
+            \item[\textbullet] \textbf{Subcontractors :} Cette option est resérvé au subcontractors, les subcontractors sont les centre de delivery qui ne sont pas a 100\% DXC, Par exemple DXC technology Maroc est une jointure entre la CDG (49\%) et DXC technoloty (51\%) ce qui fait d'elle un subcontractor.
+            Pour l'instant le design des differentes opération de cette option est toujours en discussion.
+            
+        \end{itemize}
+        
+   
+    \newpage
+    %% =========================== Interlock Process =============================
+    \item[\ding{118}] \textbf{Interlock Process}
+    
+    \vspace{0.5cm}
+    
+        \begin{itemize}
+        
+            %% ======================== Interlock from Account ===============================
+            \item[\textbullet] \textbf{Interlock Submission from Account:} Cette option permet au responsable de service line de confirmer l’information saisit par les responsables du compte mais aussi ajouter d'autre information et ensuite approuver la soumission.
+            
+            \vspace{0.5cm}
+            
+            %% ======================== Interlock from SL ===============================
+            \item[\textbullet] \textbf{Interlock Submission from Service Line:} Cette option permet au responsable des compte de confirmer l’information saisit par les responsables du service line mais aussi ajouter d'autre information et ensuite approuver la soumission.
+            
+            \vspace{0.5cm}
+            
+            %% ======================== Interlock from Finance ===============================
+            
+            \item[\textbullet] \textbf{Interlock Submission from Service Line:} Cette option permet au responsable de la finance de confirmer eux aussi les entrées de ces deux derniers, Pour l'instant le processus est toujours en cours de discussion.
+
+        \end{itemize}
+    
+    %% =========================== Demand Management =============================
+    
+    \vspace{0.5cm}
+    
+    \item[\ding{118}] \textbf{Demand Management}
+    
+    \vspace{0.5cm}
+    
+        \begin{itemize}
+            
+            %% ====================== Position Level Management ========================
+            \item[\textbullet] \textbf{Position level management:} Cette interface est consacrée à la saisie de demande par les comptes dans un format DCT.
+                
+                \begin{itemize}
+                    \item[\ding{51}] \textbf{Create demand:} Pour créer une nouvelle demande.
+                    \item[\ding{51}] \textbf{Update demand:} Pour modifier une demande existante.
+                    \item[\ding{51}] \textbf{View submission} Une interface qui permet à l'utilisateur de voir ces différentes soumissions de les modifier, de consulter les commentaires de la part de l'examinateur de la demande, d'attacher un fichier pièce jointe d'approbation, de dupliquer une demande, mais aussi de l'annuler.
+                \end{itemize}
+                
+            \vspace{0.5cm}
+            
+            %% =========================== Project  Level Management ==============================
+            
+            \item[\textbullet] \textbf{Project level management:} Cette interface est consacrée à la saisie de nouveau project.
+            
+                \begin{itemize}
+                        \item[\ding{51}] \textbf{Create a new project:} Pour créer un nouveau projet.
+                        \item[\ding{51}] \textbf{Update an existing project:} Pour modifier un projet existant.
+                        \item[\ding{51}] \textbf{Close an existing project:} Pour fermer un projet existant.
+                        \item[\ding{51}] \textbf{View submission} Cette interface permet à l'utilisateur de voir ces différentes soumissions.
+                \end{itemize}
+            
+            %% ================================ Demand team ====================================
+            
+            \vspace{0.5cm}
+            
+            \item[\textbullet] \textbf{Demand team :} Cette interface est consacrée aux experts qui vont examiner les différentes demandes pour les valider.
+            
+             \begin{itemize}
+                        \item[\ding{51}] \textbf{Demand validation check:} Cette interface contient la liste de toutes les entrées soumises par les comptes, l'examinateur en cliquant sur une entrée peut l'assigner à lui-même et ensuite effectuer les différentes vérifications, par la suite il peut la valider.
+                        \item[\ding{51}] \textbf{DCT position export:} Après avoir valider une soumission DCT l'examinateur peut ensuite accéder à cette interface qui va lui permettre d'exporter toutes les soumissions validées pour les ajouter à l'outil corporel de DXC qui gère toutes les demandes.
+                \end{itemize}
+            
+        \end{itemize}
+    
+\end{itemize}
+
+La page d'accueil contient aussi un aperçu rapide du nombre de compte affecté pour l'utilisateur, le nombre d'entré saisie par l'utilisateur.
 \\[0.3cm]
-Elle contient aussi un aperçu rapide du nombre de compte affecté pour l'utilisateur, le nombre d'entré saisie par l'utilisateur mais aussi le nombre d'entré validé par ce dernier.
-\\[0.3cm]
-On peut aussi etre re-directionner vers une application d'aide ou bien envoyer un email en cas de problem a la mailbox de support. 
+On peut aussi être re-directioner vers une application d'aide ou bien envoyer un email en cas de problème a la mailbox de support. 
 
 \newpage
 \section{Compte - Ajout de masse salariale}
