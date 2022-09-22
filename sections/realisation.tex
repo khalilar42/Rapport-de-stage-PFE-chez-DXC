@@ -302,7 +302,7 @@ La figure ci-dessous représente l'interface qui permet de faire une demande de 
     \caption{Ajout de demande - Compte existant}
 \end{figure}
 
-La procédure pour saisir une entrée de type croissance est le suivant :
+La procédure pour saisir une entrée de type croissance est la suivante :
 
 \begin{enumerate}
     
@@ -364,7 +364,7 @@ L’interface doit respecter le même tableau de règle de gestion vu précédem
     \caption{Ajout de demande - Roll-Off / Roll-On}
 \end{figure}
 
-La procédure pour saisir une entrée de type Roll-Off/Roll-On est le suivant :
+La procédure pour saisir une entrée de type Roll-Off/Roll-On est la suivante :
 
 \begin{enumerate}
     
@@ -494,7 +494,7 @@ Le tableau suivant represente les different regle de gestion que l'interface doi
     \caption{Ajout de demande - Placeholder Add Demand}
 \end{figure}
 
-La procédure pour saisir une entrée de type "Placeholder - Add demand" est le suivant :
+La procédure pour saisir une entrée de type "Placeholder - Add demand" est la suivante :
 
 \begin{enumerate}
     
@@ -511,20 +511,147 @@ La procédure pour saisir une entrée de type "Placeholder - Add demand" est le 
 \end{enumerate}
 
 
+% ========================= Modification of demand ==============================
+
 \section{Compte - Modification de la masse salariale}
 
+% =================================== Run-Off / Extension =======================
+
 \subsection{Modification de la masse salariale}
+
+\subsubsection{Présentation de l'interface :}
+
+L'interface suivante permit la saisi d'entré de modification de position, deux types d'entrée sont possible une entré "Run-Off" qui représente une personne qui quitte DXC ou bien un entrée "extension" qui permet d'étendre la durée de contrat d'un employé.
+
+\subsubsection{Regle de gestion:}
+
+Le tableau suivant represente les different regle de gestion que l'interface doit respecter :
+
+\vspace{0.2cm}
+
+\tikzset{ 
+    table/.style={
+        matrix of nodes,
+        row sep=-\pgflinewidth,
+        column sep=-\pgflinewidth,
+        nodes={
+            rectangle,
+            draw=black
+        },
+        minimum height=1.5em,
+        text depth=0.5ex,
+        text height=2ex,
+        nodes in empty cells,
+%%
+        every even row/.style={
+            nodes={fill=gray!70}
+        },
+        column 1/.style={
+            nodes={text width=10em,align=center}
+        },
+        column 2/.style={
+            nodes={text width=24em}
+        },
+        column 3/.style={
+            nodes={text width=5em,align=center}
+        },
+        row 1/.style={
+            nodes={
+                font=\bfseries,
+                align=center,
+                fill=black,
+                text=white,
+            }
+        },
+        row 2/.style={
+            nodes={
+                fill=black,
+                text=white,
+                text depth=4ex,
+            }
+        },
+        row 3/.style={
+            nodes={
+                fill=white,
+                text=black,
+                text depth=4ex,
+            }
+        },
+        row 4/.style={
+            nodes={
+                fill=black,
+                text=white,
+                text depth=4ex,
+            }
+        },
+        row 5/.style={
+            nodes={
+                fill=white,
+                text=black,
+                text depth=4ex,
+            }
+        },
+        row 6/.style={
+            nodes={
+                fill=black,
+                text=white,,
+                text depth=11ex,
+            }
+        },
+        row 7/.style={
+            nodes={
+                fill=white,
+                text=black,
+                text depth=7ex,
+            }
+        }
+    }
+}
+
+\begin{tikzpicture}
+
+\matrix (first) [table,text width=6em]
+{
+ Regle de gestion  & Description & Type \\
+ RG01 & Toutes les informations de l’étape 2 doivent être remplis & Métier \\
+ RG02 & Si une information de l'étape 2 ou bien 1 est vide le bouton de soumission doit être désactiver. & Métier \\
+ RG03 & La valeur du FTE doit être inférieur ou égal à l'FTE actuelle de l'employé & Métier \\
+ RG04  & Le champ monthly cost n'accepte que des chiffres & Métier \\
+ RG06  & Une fois l'entrée soumis tout les champs doivent etre réinitialiser puis envoyer l'utilisateur a l'interface "view submission" & IHM\\
+};
+
+
+\end{tikzpicture}
+
+\subsubsection{Fonctionnement de l'interface :}
+
 \begin{figure}[H]
     \centering
     \includegraphics[scale=0.4,keepaspectratio]{Rapport de stage PFE chez DXC/figures/modification_of_demand.png}
     \caption{Compte - Modification de la masse salariale}
 \end{figure}
 
-La modification de demande peut etre soit un "Run-Off" c'est a dire une personne qui quitte son poste ou bien une "extension" ou la personne voit sont contract étendue, le processus est a peu prés le meme, l'utilisateur choisi l'employé ensuite remplie les information necessaire de la deuxieme étape et par la suite saisi son entrés.
+La procédure pour saisir une entrée de type "Run Off" ou bien "Extension" est la suivante :
+
+\begin{enumerate}
+    
+    \item L'utilisateur doit sélectionner le compte et le contrat qu'il souhaite.
+    \vspace{0.1cm}
+    \item Dans l'étape 1 l'utilisateur peut saisir un identificateur d’employée ou bien un PPMC ID pour rechercher dans la base de données est trouvé l'employé qu'il souhaite, ensuite en le sélectionnant toutes les informations sont remplis de façon automatique.
+    \vspace{0.1cm}
+    \item La deuxième étape est saisie par l'utilisateur il doit remplir toutes les informations pour compléter l'entrée.
+    \vspace{0.1cm}
+    \item Finalement l'utilisateur a deux choix soit soumettre directement ou bien la soumettre en tant que brouillon s'il n'est pas sur ou souhaite changer les informations de l'entrée dans le futur
+
+\end{enumerate}
 
 \newpage
+Pour la saisie des entré Run-Off/ Extension, l'utilisateur est souvent amené à saisir plusieurs entré à la fois à savoir 20/30 employé ou plus qui quitte un courant poste par exemple. La saisie de ces derniers prendrait beaucoup de temps avec la manière décrite précédemment, c'est pour cela qu'une option de multi-création est présente dans cette interface. 
 
-Dans la plupart des cas l'utilisateur a plusieurs entré a saisire dans ces deux lever, choisir a chaque fois un employé remplire les meme information puis sasire l'entré peut devenir redondant c'est pour cela qu'un module de multi-creation a été fait :
+\vspace{0.3cm}
+
+En cliquant sur le bouton de navigation "go to multi-create screen" l'utilisateur peut alors réaliser des soumissions en masse comme le montre la figure suivante:
+
 
 \begin{figure}[H]
     \centering
@@ -532,26 +659,227 @@ Dans la plupart des cas l'utilisateur a plusieurs entré a saisire dans ces deux
     \caption{Compte - Modification de la masse salariale en grand nombre}
 \end{figure}
 
-La seul difference entre les deux module et le fait que l'utilisateur peut choisir plusieurs utilisateur a la fois ces dernier auront les meme information et le systeme va créer automatiquement une entré par utilisateur selectionné.
+\begin{enumerate}
+    
+    \item L'utilisateur doit sélectionner le compte et le contrat qu'il souhaite.
+    \vspace{0.1cm}
+    \item Ensuite dans l'étape 1 il va selectionner cette fois-ci la liste des employé qu'il souhaite sasir.
+    \vspace{0.1cm}
+    \item Dès lors il a deux options, s’il saisit plusieurs employés ces entrée vont tous être créer avec les mêmes informations de la deuxième étape, (un message d'avertissement est montré pour guider l'utilisateur), ou bien il peut sélectionner un employé à la fois.
+    \vspace{0.1cm}
+    \item Finalement l'utilisateur a deux choix soit soumettre directement ou bien la soumettre en tant que brouillon s'il n'est pas sur ou souhaite changer les informations de l'entrée dans le futur
+    \item L'utilisateur n'est renvoyé à l'écran "view submission" que lorsqu'il complète tous les employés sélectionnés précédemment.
+
+\end{enumerate}
+
 
 \newpage
+
+%======================= Placeholder - Modification of demand =================================
 
 \subsection{Placeholder Modification de la masse salariale}
 
-De la meme maniere que le placeholder pour l'ajout de demande, le placeholder de modification de demande permet a l'utilisateur de créer des entrée pour des future besoin :
+\subsubsection{Présentation de l'interface :}
 
-\begin{figure}[H]
+De la même manière que le placeholder pour l'ajout de demande, le placeholder de modification de demande permet à l'utilisateur de créer des entrées pour des future modifications.
+
+\subsubsection{Regle de gestion:}
+
+Le tableau suivant represente les different regle de gestion que l'interface doit respecter :
+
+\vspace{0.2cm}
+
+\tikzset{ 
+    table/.style={
+        matrix of nodes,
+        row sep=-\pgflinewidth,
+        column sep=-\pgflinewidth,
+        nodes={
+            rectangle,
+            draw=black
+        },
+        minimum height=1.5em,
+        text depth=0.5ex,
+        text height=2ex,
+        nodes in empty cells,
+%%
+        every even row/.style={
+            nodes={fill=gray!70}
+        },
+        column 1/.style={
+            nodes={text width=10em,align=center}
+        },
+        column 2/.style={
+            nodes={text width=24em}
+        },
+        column 3/.style={
+            nodes={text width=5em,align=center}
+        },
+        row 1/.style={
+            nodes={
+                font=\bfseries,
+                align=center,
+                fill=black,
+                text=white,
+            }
+        },
+        row 2/.style={
+            nodes={
+                fill=black,
+                text=white,
+                text depth=4ex,
+            }
+        },
+        row 3/.style={
+            nodes={
+                fill=white,
+                text=black,
+                text depth=4ex,
+            }
+        },
+        row 4/.style={
+            nodes={
+                fill=black,
+                text=white,
+                text depth=4ex,
+            }
+        },
+        row 5/.style={
+            nodes={
+                fill=white,
+                text=black,
+                text depth=7ex,
+            }
+        }
+    }
+}
+
+\begin{tikzpicture}
+
+\matrix (first) [table,text width=6em]
+{
+ Regle de gestion  & Description & Type \\
+ RG01 & Toutes les informations de l’étape 2 doivent être remplis & Métier \\
+ RG02 & Si une information de l'étape 2 est vide le bouton de soumission doit être désactiver. & Métier \\
+ RG03  & Le champ monthly cost n'accepte que des chiffres & Métier \\
+ RG04  & Une fois l'entrée soumis tout les champs doivent etre réinitialiser puis envoyer l'utilisateur a l'interface "view submission" & IHM\\
+};
+
+\end{tikzpicture}
+
+\subsubsection{Fonctionnement de l'interface :}
+
+\begin{figure}[hbt!]
     \centering
-    \includegraphics[scale=0.4,keepaspectratio]{Rapport de stage PFE chez DXC/figures/placeholder_modification_of_demand.jpg}
+    \includegraphics[scale=0.37,keepaspectratio]{Rapport de stage PFE chez DXC/figures/placeholder_modification_of_demand.jpg}
     \caption{Placeholder - Modification de la masse salariale}
 \end{figure}
 
-Ce dernier ne contient pas tout les informations necessaire pour une entrée run-off mais peut etre ensuite convertit en une entrée VA avec tout les information necessaire.
+La procédure pour saisir une entrée de type "Placeholder - Modification of demand" est la suivante :
 
-\newpage
+\begin{enumerate}
+    
+    \item L'utilisateur doit sélectionner le compte et le contrat qu'il souhaite.
+    \vspace{0.1cm}
+    \item Il doit ensuite remplir les informations de l'étape 1.(Puisque ce Placeholder n'est qu'une sorte de préparation pour une future entrée de modification l'utilisateur ne sélectionne pas un employé spécifique)
+    \vspace{0.1cm}
+    \item Finalement l'utilisateur a deux choix soit soumettre directement ou bien la soumettre en tant que brouillon s'il n'est pas sur ou souhaite changer les informations de l'entrée dans le futur
+
+\end{enumerate}
+
+%======================================== Account View submission ===============================
+
 \section{Compte - Consultation des soumissions}
 
-Le module de consultation des soumissions est composé de plusieurs filtre qui vont permettre a l'utilisateur de facilement trouver son entrée 
+\subsubsection{Présentation de l'interface :}
+
+Le module de consultation des soumissions permet à l'utilisateur de consulter ces soumissions plusieurs filtre sont présent pour faciliter la recherche, L'utilisateur peut aussi modifier, dupliquer, créer une entrée DCT à travers cette interface.
+
+\subsubsection{Regle de gestion:}
+
+Le tableau suivant represente les different regle de gestion que l'interface doit respecter :
+
+\vspace{0.2cm}
+
+\tikzset{ 
+    table/.style={
+        matrix of nodes,
+        row sep=-\pgflinewidth,
+        column sep=-\pgflinewidth,
+        nodes={
+            rectangle,
+            draw=black
+        },
+        minimum height=1.5em,
+        text depth=0.5ex,
+        text height=2ex,
+        nodes in empty cells,
+%%
+        every even row/.style={
+            nodes={fill=gray!70}
+        },
+        column 1/.style={
+            nodes={text width=10em,align=center}
+        },
+        column 2/.style={
+            nodes={text width=24em}
+        },
+        column 3/.style={
+            nodes={text width=5em,align=center}
+        },
+        row 1/.style={
+            nodes={
+                font=\bfseries,
+                align=center,
+                fill=black,
+                text=white,
+            }
+        },
+        row 2/.style={
+            nodes={
+                fill=black,
+                text=white,
+                text depth=4ex,
+            }
+        },
+        row 3/.style={
+            nodes={
+                fill=white,
+                text=black,
+                text depth=4ex,
+            }
+        },
+        row 4/.style={
+            nodes={
+                fill=black,
+                text=white,
+                text depth=4ex,
+            }
+        },
+        row 5/.style={
+            nodes={
+                fill=white,
+                text=black,
+                text depth=7ex,
+            }
+        }
+    }
+}
+
+\begin{tikzpicture}
+
+\matrix (first) [table,text width=6em]
+{
+ Regle de gestion  & Description & Type \\
+ RG01 & L’utilisateur doit pouvoir combiner plusieurs filtres à la fois & Métier \\
+ RG02 & Le filtre "My Entries" doit être active par défaut lors de l’accès a l'interface & Métier \\
+ RG03  & En cliquant sur une entrée l'utilisateur doit voir un menu latéral qui lui permet de modifier dupliquer ou créer un DCT à partir d'une entrée. & Métier \\
+ RG04  & Si une entrée est modifiée l'utilisateur doit pouvoir voir le changement instantanément dans la table des données & Métier\\
+};
+
+\end{tikzpicture}
+
+\subsubsection{Fonctionnement de l'interface :}
 
 \begin{figure}[H]
     \centering
@@ -559,14 +887,54 @@ Le module de consultation des soumissions est composé de plusieurs filtre qui v
     \caption{Compte - Consultation des soumissions}
 \end{figure}
 
-En plus de cela en cliquant sur une entré nous avons un menu latéral qui vas nous permettre de modifier les information de l'entrer puise enregistre, ou bien 
-dupliquer l'entrée mais aussi créer une entrée DCT a partir de cette derniere :
+\begin{enumerate}
+    
+    \item L'utilisateur peut par défaut ne voir que les entrée qui lui appartienne
+    \vspace{0.1cm}
+    \item Il peut ensuite filtrer les données en utilisant les different filtre.
+    \vspace{0.1cm}
+    \item En cliquant sur une entré un menu latérale apparait selon le type de l'entrée
+
+\end{enumerate}
+
+Si l'entrée n'est pas de type placeholder l'utilisateur est renvoyé a ce menu : 
 
 \begin{figure}[H]
     \centering
-    \includegraphics[scale=0.4,keepaspectratio]{Rapport de stage PFE chez DXC/figures/account_view_side_menu.png}
+    \includegraphics[width=16cm, height=7cm]{Rapport de stage PFE chez DXC/figures/account_view_side_menu.png}
     \caption{Compte - Consultation des soumissions - Menu latéral}
 \end{figure}
+
+\begin{enumerate}
+    
+    \item L'utilisateur peut alors modifier les information est cliquer sur le bouton "save" pour enregistrer ces modifications
+    \vspace{0.1cm}
+    \item L'utilisateur peut dupliquer cette entrée en cliquant sur le bouton "Duplicate"
+    \vspace{0.1cm}
+    \item L'utilisateur peut aussi créer une entré DCT à travers cette entrée
+    \item Si l'utilisateur souhaite annuler il n'a qu'à cliquer sur la croix en haut à droite.
+
+\end{enumerate}
+
+Il existe aussi une option pour effectuer une modification en masse des entrées pour cela l'utilisateur doit cliquer sur le bouton "Go to multi update screen", il est renvoyé vers l'interface suivante:
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale=0.4,keepaspectratio]{Rapport de stage PFE chez DXC/figures/multi_update_view_submission.png}
+    \caption{Compte - Consultation des soumissions}
+\end{figure}
+
+\begin{enumerate}
+    
+    \item L'utilisateur sélectionne les différentes entrées qu'il souhaite modifier et puis clique sur le bouton next.
+    \vspace{0.1cm}
+    \item Ensuite l'utilisateur est présenté avec les différents champs qu'il peut modifier.
+    \vspace{0.1cm}
+    \item L'utilisateur doit saisir la valeur du champ qu'il veut modifier, ensuite cliquer sur le bouton ok, cela va modifier cette valeur pour toutes les entrées sélectionner
+    \vspace{0.1cm}
+    \item Une fois cliquer sur le buton ok ce dernier va réinitialiser le champ et ce désactiver.
+
+\end{enumerate}
 
 \section{DCT Position Level Management}
 
