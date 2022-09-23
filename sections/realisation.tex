@@ -936,11 +936,127 @@ Il existe aussi une option pour effectuer une modification en masse des entrées
 
 \end{enumerate}
 
+% ============================ DCT Position Management =======================
+
 \section{DCT Position Level Management}
+
+% ============================ DCT Position Management =======================
 
 \subsection{DCT Position Level Management - Creation de demande}
 
-DCT est l'acronyme de Demand creation template, Pour ce screen l'utilisateur peut créer une demande de croissance : 
+\subsubsection{Présentation de l'interface :}
+
+DCT est l'acronyme de Demand creation template, après avoir créer une entrée de type VA est confirmer cette dernière, une entré DCT va être créer pour compléter le processus.
+
+\subsubsection{Regle de gestion:}
+
+Le tableau suivant represente les different regle de gestion que l'interface doit respecter :
+
+\vspace{0.2cm}
+
+\tikzset{ 
+    table/.style={
+        matrix of nodes,
+        row sep=-\pgflinewidth,
+        column sep=-\pgflinewidth,
+        nodes={
+            rectangle,
+            draw=black
+        },
+        minimum height=1.5em,
+        text depth=0.5ex,
+        text height=2ex,
+        nodes in empty cells,
+%%
+        every even row/.style={
+            nodes={fill=gray!70}
+        },
+        column 1/.style={
+            nodes={text width=10em,align=center}
+        },
+        column 2/.style={
+            nodes={text width=24em}
+        },
+        column 3/.style={
+            nodes={text width=5em,align=center}
+        },
+        row 1/.style={
+            nodes={
+                font=\bfseries,
+                align=center,
+                fill=black,
+                text=white,
+            }
+        },
+        row 2/.style={
+            nodes={
+                fill=black,
+                text=white,
+                text depth=22ex,
+            }
+        },
+        row 3/.style={
+            nodes={
+                fill=white,
+                text=black,
+                text depth=4ex,
+            }
+        },
+        row 4/.style={
+            nodes={
+                fill=black,
+                text=white,
+                text depth=4ex,
+            }
+        },
+        row 5/.style={
+            nodes={
+                fill=white,
+                text=black,
+                text depth=7ex,
+            }
+        },
+        row 6/.style={
+            nodes={
+                fill=white,
+                text=black,
+                text depth=5ex,
+            }
+        },
+        row 7/.style={
+            nodes={
+                fill=white,
+                text=black,
+                text depth=5ex,
+            }
+        },
+        row 8/.style={
+            nodes={
+                fill=white,
+                text=black,
+                text depth=7ex,
+            }
+        }
+    }
+}
+
+\begin{tikzpicture}
+
+\matrix (first) [table,text width=8em]
+{
+ Regle de gestion  & Description & Type \\
+ RG01 & Les champs suivant sont obligatoires: Financial client Name, DCT Type, OPX-ID, Project ID, Project Sold, Early staffing, Bill Type, Monthly position cost,Monthly Position Revenue, Reason Position Needed, Start Date/end Date/FTE, Country, Location Contractually Constraint, Position Work Location, Level Required, Resource Type, Requested Ressource & Métier \\
+ RG02 & Si un champ obligatoire est vide le bouton de soumission doit être désactiver & Métier \\
+ RG03 & Si un utilisateur  saisit un OPX-ID et clique sur la loupe le Financial client name doit être  automatiquement saisit & Métier \\
+ RG04 & Si l'utilisateur saisie un "Requested Ressource" le "Ressource Pool" doit etre automatiquement remplis & Métier\\
+ RG05 & Monthly Position Cost et revenue n'accepte que des chiffres & Métier\\
+ RG06 & Si le DCT Type est un Addon New les champs Project Sold et early staffing sont désactiver & Métier\\
+ RG07 & Une fois l'entrée soumis tout les champs doivent etre réinitialiser puis envoyer l'utilisateur a l'interface "DCT View Submission" & IHM\\
+};
+
+\end{tikzpicture}
+
+\subsubsection{Fonctionnement de l'interface :}
 
 \begin{figure}[H]
     \centering
@@ -948,11 +1064,31 @@ DCT est l'acronyme de Demand creation template, Pour ce screen l'utilisateur peu
     \caption{DCT Position Level Management - Creation de demande }
 \end{figure}
 
-Le formulaire est composée de plusieurs champ a remplire avec differentes information, la plupart sont automatiquement remplie a travers les information precedente, ces derniers sont aussi vérifier pour n'avoir que des donnée valide.
+La procédure pour saisir une entrée de type "DCT - Creation" est la suivante :
+
+\begin{enumerate}
+    
+    \item L'utilisateur doit d'abord sélectionner le type de DCT qu'il veut créer.
+    \vspace{0.1cm}
+    \item Ensuite il doit remplir tous les champs obligatoires.
+    \vspace{0.1cm}
+    \item Et finalement deux options s’offrent à lui soit directement soumettre son entrée ou bien l'enregistrer en tant que brouillon s'il n'est pas sur des informations et souhaite les modifier dans le futur.
+
+\end{enumerate}
+
+% ================== DCT Position management - UPDATE =========================
 
 \subsection{DCT Position Level Management - Mise a jour de la demande}
 
-Ce screen permet de saisire une modification au niveau d'un DCT, il a le meme principe que le precedent : 
+\subsubsection{Présentation de l'interface :}
+
+Cette interface permet de saisire une modification au niveau d'un DCT, il a le meme principe que le precedent : 
+
+\subsubsection{Regle de gestion:}
+
+Le meme tableau de regle de gestion vu précedement est utilisée poru cette interface
+
+\subsubsection{Fonctionnement de l'interface :}
 
 \begin{figure}[H]
     \centering
@@ -960,10 +1096,112 @@ Ce screen permet de saisire une modification au niveau d'un DCT, il a le meme pr
     \caption{DCT Position Level Management - Mise a jour de la demande}
 \end{figure}
 
+L'interface est à peu près la même que la précédente, la seule différence est dans la position des champs, dans ce dernier le premier champ à modifier est le "PLM ID" ainsi que le "Position ID", la procédure de saisie d'une demande de modification est la suivante :
+
+\begin{enumerate}
+    
+    \item L'utilisateur doit d'abord sélectionner le type de DCT qu'il veut créer.
+    \vspace{0.1cm}
+    \item L'utilisateur ne doit saisir que les champs obligatoires selon le type du DCT.
+    \vspace{0.1cm}
+    \item Et finalement deux options s’offrent à lui soit directement soumettre son entrée ou bien l'enregistrer en tant que brouillon s'il n'est pas sur des informations et souhaite les modifier dans le futur.
+
+\end{enumerate}
+
+% ================================ DCT View submission ===============================
 \subsection{DCT Position Level Management - Consultation des soumissions}
 
-Aprés avoir saisit l'entrée l'utilisateur est envoyé vers le screen de consultation des soumissions:
+\subsubsection{Présentation de l'interface :}
 
+Cette interface permet de consulter ses soumissions, et propose aussi la possibilité de modifier, dupliquer, annuler ou bien attacher un mail d'approbation avec la demande.
+
+\subsubsection{Regle de gestion:}
+
+Le tableau suivant represente les different regle de gestion que l'interface doit respecter :
+
+\vspace{0.2cm}
+
+\tikzset{ 
+    table/.style={
+        matrix of nodes,
+        row sep=-\pgflinewidth,
+        column sep=-\pgflinewidth,
+        nodes={
+            rectangle,
+            draw=black
+        },
+        minimum height=1.5em,
+        text depth=0.5ex,
+        text height=2ex,
+        nodes in empty cells,
+%%
+        every even row/.style={
+            nodes={fill=gray!70}
+        },
+        column 1/.style={
+            nodes={text width=10em,align=center}
+        },
+        column 2/.style={
+            nodes={text width=24em}
+        },
+        column 3/.style={
+            nodes={text width=5em,align=center}
+        },
+        row 1/.style={
+            nodes={
+                font=\bfseries,
+                align=center,
+                fill=black,
+                text=white,
+            }
+        },
+        row 2/.style={
+            nodes={
+                fill=black,
+                text=white,
+                text depth=2ex,
+            }
+        },
+        row 3/.style={
+            nodes={
+                fill=white,
+                text=black,
+                text depth=4ex,
+            }
+        },
+        row 4/.style={
+            nodes={
+                fill=black,
+                text=white,
+                text depth=4ex,
+            }
+        },
+        row 5/.style={
+            nodes={
+                fill=white,
+                text=black,
+                text depth=5ex,
+            }
+        }
+    }
+}
+
+\begin{tikzpicture}
+
+\matrix (first) [table,text width=8em]
+{
+ Regle de gestion  & Description & Type \\
+ RG01 & Le bouton "My entries" doit etre activer par défaut & Métier \\
+ RG02 & Les entrées doivent être trié selon l'ordre de création, dans l'ordre croissant. & Métier \\
+ RG03 & Les bouton "cancel submission" et "edit" ne sont active que lorsque l'entrée et dans le statut "draft" ou bien "review" & Métier \\
+ RG04 & Le bouton attach approval n'est active que l'orsque l'utilisateur ajoute un fichier & Métier\\
+};
+
+\end{tikzpicture}
+
+\subsubsection{Fonctionnement de l'interface :}
+
+Aprés avoir saisit l'entrée l'utilisateur est envoyé vers l'interface de consultation des soumissions:
 
 \begin{figure}[H]
     \centering
@@ -971,12 +1209,154 @@ Aprés avoir saisit l'entrée l'utilisateur est envoyé vers le screen de consul
     \caption{DCT Position Level Management - Consultation des soumissions}
 \end{figure}
 
-Dans ce dernier nous avont les differents information saisit par l'utilisateur. en cliquant sur l'entrée un menu apparait qui contient quelque bouton, le premier permet de supprimé une entré en cas d'erreur, le deuxiem edit est utilisé pour modifier l'entrée pour corrigé une erreur, il y'a aussi l'option du multi duplicate cette derniere permet a l'utilisateur de dupliquer une entrée en plusieurs si il veut par exemple modifier que quelque information pour chaque entrée et finalement la possibiliter d'attacher un agrément exceptionnel si ce dernier est demander par les personnes qui inspecte l'entrée, d'ailleur en peut voir en haut un commentaire demander a ce dernier d'ajouter le fichier d'agréement.
+L'interface est à peu près la même que la précédente, la seule différence est dans la position des champs, dans ce dernier le premier champ à modifier est le "PLM ID" ainsi que le "Position ID", la procédure de saisie d'une demande de modification est la suivante :
+
+\begin{enumerate}
+    
+    \item L'utilisateur peut consulter les informations de sont entrée en parcourant le tableau, il peut aussi filter selon le status de l'entrée
+    \vspace{0.1cm}
+    \item En cliquant sur l'entrée un menu se presente a l'utilisateur
+    \vspace{0.1cm}
+    \item S’il souhaite annuler l'entrée, il suffit de cliquer sur le bouton "cancel submission" ce dernier l'envoie vers un autre menu de confirmation et puis il peut annuler son entrée.
+    \vspace{0.1cm}
+    \item S’il souhaite modifier son entrée il suffit de cliquer sur le bouton "Edit" l'utilisateur est alors renvoyé vers le formulaire avec toutes les informations préremplie il suffit alors de modifier son entrée puis resoumettre.
+    \vspace{0.1cm}
+    \item En cliquant sur le bouton "Multi duplicate" l'utilisateur peut dupliquer son entrée autant de fois qu'il le souhaite.
+    \vspace{0.1cm}
+    \item Si l'entrée nécessite un mail d'approbation de la part de L'ADL ou autre l'utilisateur peut alors soumettre ce fichier en cliquant sur le bouton "Attach Approval".
+
+\end{enumerate}
+
+% ======================= DCT Demand validation checks =============================
 
 \subsection{DCT Position Level Management - Validation des entrée}
+
+\subsubsection{Présentation de l'interface :}
+
+Cette interface permet de valider les soumission DCT saisit par les comptes.
+
+\subsubsection{Regle de gestion:}
+
+Le tableau suivant represente les different regle de gestion que l'interface doit respecter :
+
+\vspace{0.2cm}
+
+\tikzset{ 
+    table/.style={
+        matrix of nodes,
+        row sep=-\pgflinewidth,
+        column sep=-\pgflinewidth,
+        nodes={
+            rectangle,
+            draw=black
+        },
+        minimum height=1.5em,
+        text depth=0.5ex,
+        text height=2ex,
+        nodes in empty cells,
+%%
+        every even row/.style={
+            nodes={fill=gray!70}
+        },
+        column 1/.style={
+            nodes={text width=10em,align=center}
+        },
+        column 2/.style={
+            nodes={text width=24em}
+        },
+        column 3/.style={
+            nodes={text width=5em,align=center}
+        },
+        row 1/.style={
+            nodes={
+                font=\bfseries,
+                align=center,
+                fill=black,
+                text=white,
+            }
+        },
+        row 2/.style={
+            nodes={
+                fill=black,
+                text=white,
+                text depth=2ex,
+            }
+        },
+        row 3/.style={
+            nodes={
+                fill=white,
+                text=black,
+                text depth=6ex,
+            }
+        },
+        row 4/.style={
+            nodes={
+                fill=black,
+                text=white,
+                text depth=8ex,
+            }
+        },
+        row 5/.style={
+            nodes={
+                fill=white,
+                text=black,
+                text depth=9ex,
+            }
+        },
+        row 6/.style={
+            nodes={
+                fill=white,
+                text=black,
+                text depth=8ex,
+            }
+        },
+        row 7/.style={
+            nodes={
+                fill=white,
+                text=black,
+                text depth=5ex,
+            }
+        }
+    }
+}
+
+\begin{tikzpicture}
+
+\matrix (first) [table,text width=8em]
+{
+ Regle de gestion  & Description & Type \\
+ RG01 & Le bouton "My entries" doit être active par défaut. & Métier \\
+ RG02 & Les entrées ne doivent être visible que lorsque le statut et "Submitted" ou bien "Assigned". & Métier \\
+ RG03 & L'utilisateur peut prendre la possession d'une entrée, cette dernière sera verrouiller pour tous les autres utilisateurs & Métier \\
+ RG04 & Si l'utilisateur prend possession d'une entrée, son statut se modifie est devient "Assigned", le champ ownership est aussi remplis avec l'email de l'utilisateur. & Métier\\
+ RG05 & Si l'utilisateur clique sur le bouton "submit" cette entrée est définitivement verrouiller ne peut plus être modifier. & Métier\\
+ RG06 & Si l'utilisateur soumet son entrée, cette dernière est verrouillée et ne peut plus être modifier. & Métier\\
+};
+
+\end{tikzpicture}
+
+\subsubsection{Fonctionnement de l'interface :}
 
 \begin{figure}[H]
     \centering
     \includegraphics[scale=0.4,keepaspectratio]{Rapport de stage PFE chez DXC/figures/DCT_demand_validation_checks.png}
     \caption{DCT Position Level Management - Validation des entrée}
 \end{figure}
+
+La procedure pour valider une entrée est la suivante:
+
+\begin{enumerate}
+    
+    \item L'utilisateur peut filtrer les soumissions selon le "portfolio" ou bien le nom du client pour faciliter la recherche.
+    \vspace{0.1cm}
+    \item En cliquant sur l'entrée un menu latérale se présente à l'utilisateur.
+    \vspace{0.1cm}
+    \item L'utilisateur doit d'abord prendre la possession de l'entrée pour pouvoir commencer le processus de validation.
+    \vspace{0.1cm}
+    \item Il va ensuite vérifier les différentes informations et cocher les vérification valides.
+    \vspace{0.1cm}
+    \item Si l'entrée n'est pas complète ce dernier peut la renvoyer avec un commentaire ainsi et un statut review pour être complété par le responsable du compte.
+    \vspace{0.1cm}
+    \item Deux options s'offre à l'utilisateur soit sauvegarder sa progression ou bien soumettre l'entrée lors de la fin du processus de validation.
+
+\end{enumerate}
