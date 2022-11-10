@@ -1,5 +1,5 @@
 \documentclass[11pt,french]{report}
-\usepackage[margin=0.7in,left=0.8in,right=0.8in]{geometry}
+\usepackage[margin=0.7in,left=0.5in,right=0.8in]{geometry}
 \usepackage[toc,page]{appendix}
 \usepackage{graphicx}
 \usepackage{natbib}
@@ -14,11 +14,14 @@
 \usepackage{titlesec,xcolor}
 \usepackage{wrapfig}
 \usepackage{float}
+\usepackage{rotating}
 \usepackage{pifont}
 \usepackage[dvipsnames]{xcolor}
 \usepackage{tabularx}
 \usepackage{tikz}
 \usetikzlibrary{matrix}
+
+
 
 \SetLipsumDefault{1}
 
@@ -52,30 +55,33 @@
 
 \linespread{1.3}\huge {\bfseries Master Informatique :}\\\Huge{Traitement Inteligent des systèmes}
 
-\rule{\textwidth}{2pt}\\[0.3cm]
+\rule{\textwidth}{2pt}\\[0.2cm]
 \huge{\bfseries Rapport de stage de fin d'études}
-\rule{\textwidth}{2pt}\\[0.3cm]
+\rule{\textwidth}{2pt}\\[0.2cm]
 
 \linespread{1.5}\huge {\bfseries Intitulé :}\\
-Mise en place d’une solution décisionnelle pour le suivi et la gestion de la masse salariale
- \\[0,3cm]
+Developpement d’une solution Power Platform pour le suivi et la gestion de la masse salariale\\[0.3cm]
+
 
 \linespread{1.3}\huge {\bfseries Fait par :}\\{\huge ARCHKAK Khalil}\\[0.5cm]
 
-\noindent \Large{\textbf{soutenu le xx Septembre 2022 devant le Jury}} \\[0.7cm]
+\noindent \Large{\textbf{Soutenu le 21 Octobre 2022}}  \\[0.3cm]
 
 % \linespread{2}\huge{\bfseries Encadrant :}\\
 % \large{- \textbf{Abdellah IDRISII:}}\normalsize{\textbf{Professeur au sein de la faculté de science de rabat et coordinateur du master IPS}}\\
 % \large{- \textbf{Ahmed EL-YAHYAOUI :}}\normalsize{\textbf{Professeur au sein de la faculté de science de rabat}}
 
-\begin{tabular}{lll}
+\noindent \Large{\textbf{Devant le jury :}}  \\[0.3cm]
+
+\begin{flushleft}
+\begin{tabular}{@{}lll}
 
 \Large{M. Abdellah IDRISSI}  &  \Large{Professeur à la Faculté des Sciences  - Rabat} & \Large{\textit{Président}}	\\[0.1cm]
-\Large{M. Ahmed EL-YAHYAOUI}   &  \Large{Professeur à la Faculté des Sciences - Rabat} & \Large{\textit{Encadrant}}	\\
+\Large{M. Si Lhoussain AOURAGH }   &  \Large{Professeur à l'ENSIAS -           Rabat} & \Large{\textit{Encadrant}}	\\
+\Large{M. Ez-zahout Abderrahmane}  &  \Large{Professeur à la Faculté des Sciences  - Rabat} & \Large{\textit{Examinateur}}	\\[0.1cm]
 
 \end{tabular}
-
-
+\end{flushleft}
 
 % \begin{minipage}[t]{8cm}
 % \linespread{2}\huge{\bfseries Encadrant :}\\
@@ -89,15 +95,12 @@ Mise en place d’une solution décisionnelle pour le suivi et la gestion de la 
 % \Large{\textbf{-} Adil EL-MESSARI}\\
 % \end{minipage}
 % \\[1.2cm]
-\vspace*{1cm}
-\linespread{1.3}\huge {\bfseries Réalisé le : \today}\\[0,3cm]
+\vspace*{0.5cm}
 \textbf{\large{Année universitaire : 2021/2022}}
 
 \end{center}
 
 \end{titlepage}
-
-
 
 % -------------------------------------------------------------------
 % Abstract
@@ -117,7 +120,6 @@ Mise en place d’une solution décisionnelle pour le suivi et la gestion de la 
 \newpage
 \listoffigures
 
-
 % -------------------------------------------------------------------
 % Main sections (as required)
 % -------------------------------------------------------------------
@@ -129,19 +131,16 @@ Mise en place d’une solution décisionnelle pour le suivi et la gestion de la 
 \input{Rapport de stage PFE chez DXC/sections/etude_des_besoins}
 \input{Rapport de stage PFE chez DXC/sections/etude_Technique}
 \input{Rapport de stage PFE chez DXC/sections/realisation}
-
-\newpage
-% \input{sections/results.tex}
-% \input{sections/discussion.tex}
-% \input{sections/conclusion.tex}
-
+\input{Rapport de stage PFE chez DXC/sections/Conclusion}
+\input{Rapport de stage PFE chez DXC/sections/bibliographie}
+\printbibliography
 
 % -------------------------------------------------------------------
 % Bibliography
 % -------------------------------------------------------------------
 
-% \bibliographystyle{agsm} 
-% \bibliography{mybibliography} 
+\bibliographystyle{plain} 
+\bibliography{bibliographie}{}
 
 
 % -------------------------------------------------------------------
